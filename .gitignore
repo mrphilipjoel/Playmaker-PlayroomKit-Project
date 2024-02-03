@@ -9,10 +9,19 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/Assets/Playmaker/
 /Assets/Gizmos/
 /Assets/Plugins/
 /Assets/PlayroomKit/
+
+# Playmaker Stuff
+/Assets/PlayMaker/Actions/
+/Assets/PlayMaker/Editor/
+/Assets/PlayMaker/Templates/
+/Assets/PlayMaker/Versions/
+/Assets/PlayMaker/ConditionalExpression.dll
+/Assets/PlayMaker/FsmProcessor.cs
+/Assets/PlayMaker/Readme.txt
+/Assets/PlayMaker/UpdateHelper.cs
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
