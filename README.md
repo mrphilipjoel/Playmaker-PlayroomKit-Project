@@ -7,5 +7,8 @@ After opening Project, you'll need to install your copy of PlayMaker from Unity 
 Before Importing Playmaker, make sure Assets/PlayMaker/Resources/PlayMakerGlobals.asset is unchecked so it doesn't get imported.
 If you do accidentally import it, just replace that file with the one in this repo.
 
+You may need to import the 'Vector Graphics' package via the Package Manager "by name":
+com.unity.vectorgraphics
+
 You will also want to import the latest PlayroomKit Unity SDK from here:
 https://github.com/asadm/playroom-unity/releases
