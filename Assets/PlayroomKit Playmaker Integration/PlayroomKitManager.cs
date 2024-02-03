@@ -2,10 +2,18 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit
 {
     using UnityEngine;
     using Playroom;
+    using System.Collections.Generic;
+    using HutongGames.PlayMaker;
+    using static Playroom.PlayroomKit;
+    using AOT;
+    using System;
 
     public class PlayroomKitManager : MonoBehaviour
     {
         public static PlayroomKitManager Instance { get; private set; }
+
+        private static Dictionary<string, GameObject> PlayerObjectDictionary = new();
+        private static Dictionary<string, PlayroomKit.Player> PlayerReferenceDictionary = new();
 
         [Header("PlayroomKit Options")]
         public bool streamMode = false;
@@ -23,7 +31,7 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit
 
 #if UNITY_EDITOR
             streamMode = true;
-            int randomInt = Random.Range(1111, 9999);
+            int randomInt = UnityEngine.Random.Range(1111, 9999);
 #endif
             PlayroomKit.InitOptions options = new PlayroomKit.InitOptions
             {
@@ -43,6 +51,7 @@ WebGLInput.captureAllKeyboardInput = false;
 #endif
             PlayroomKit.InsertCoin(() =>
             {
+                PlayroomKit.OnPlayerJoin(PlaymakerOnPlayerJoin);
                 PlayMakerFSM.BroadcastEvent("PlayroomKit/InsertCoin");
 
 
@@ -50,19 +59,49 @@ WebGLInput.captureAllKeyboardInput = false;
             WebGLInput.captureAllKeyboardInput = true;
 #endif
             });
-/*            void Start()
+
+
+        }
+
+        private void PlaymakerOnPlayerJoin(PlayroomKit.Player player)
+        {
+            player.OnQuit(RemovePlayer);
+            PlayerReferenceDictionary.Add(player.id, player);
+            Fsm.EventData.StringData = player.id;
+            PlayMakerFSM.BroadcastEvent("PlayroomKit/OnPlayerJoin");
+        }
+
+        public void AddPlayer(string playerId, GameObject playerObject)
+        {
+            PlayerObjectDictionary.Add(playerId, playerObject);
+            
+        }
+
+        [MonoPInvokeCallback(typeof(Action<string>))]
+        private static void RemovePlayer(string playerID)
+        {
+            if (PlayerObjectDictionary.TryGetValue(playerID, out GameObject player))
             {
-                PlayroomKit.InsertCoin(() =>
-                {
-                    PlayMakerFSM.BroadcastEvent("PlayroomKit/InsertCoin");
+                Destroy(player);
+            }
+            else
+            {
+                Debug.LogWarning("Player not in dictionary!");
+            }
 
+        }
 
-#if !UNITY_EDITOR && UNITY_WEBGL
-            WebGLInput.captureAllKeyboardInput = true;
-#endif
-                });
-            }*/
-
+        public PlayroomKit.Player GetPlayer(string playerID)
+        {
+            if (PlayerReferenceDictionary.TryGetValue(playerID, out PlayroomKit.Player player))
+            {
+                return player;
+            }
+            else
+            {
+                Debug.LogWarning("PlayerID not in dictionary!");
+                return null;
+            }
         }
     }
 }
