@@ -1,3 +1,6 @@
+This is an Unofficial Example Project showing the integration of Playmaker and PlayroomKit.
+I will probably do some tutorials on my youtube channel www.youtube.com/philipherlitz
+
 This is a complete Unity Project that should allow you to use Playmaker and PlayroomKit together, and quickly export to WebGL.
 
 After opening Project, you'll need to install your copy of PlayMaker from Unity Package Manager.
