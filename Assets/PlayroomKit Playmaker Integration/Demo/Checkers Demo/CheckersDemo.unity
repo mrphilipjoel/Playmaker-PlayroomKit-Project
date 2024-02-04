@@ -1480,16 +1480,19 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.UiTextSetText
         - HutongGames.PlayMaker.Actions.UiGraphicSetColor
         - GooglyEyesGames.PlayMaker.Actions.SetSVGImageSprite
+        - HutongGames.PlayMaker.Actions.SetAssetMaterialColor
         customNames:
         - 
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000003000000070000000f000000
-        actionHashCodes: 27fbe10309fbab04c9f57904fc838600
-        unityObjectParams: []
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000003000000070000000f00000011000000
+        actionHashCodes: 27fbe10309fbab04c9f57904fc83860082591403
+        unityObjectParams:
+        - {fileID: 2100000, guid: 94c2feb7f341915468117aab203f064b, type: 2}
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 1
@@ -1524,14 +1527,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: sPlayerName
+          name: PLAYERS/TOP/NAME
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 
         fsmObjectParams:
         - useVariable: 1
-          name: sprite
+          name: PLAYERS/TOP/SPRITE
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1595,7 +1598,13 @@ MonoBehaviour:
         fsmVector3Params: []
         fsmColorParams:
         - useVariable: 1
-          name: playerColor
+          name: PLAYERS/TOP/COLOR
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {r: 0, g: 0, b: 0, a: 1}
+        - useVariable: 1
+          name: PLAYERS/TOP/COLOR
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1603,12 +1612,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000
+        byteData: 00000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1100000011000000010000001400000012000000110000000100000014000000190000000f0000000f0000000f0000000f00000011000000010000001400000018000000
+        paramDataType: 1100000011000000010000001400000012000000110000000100000014000000190000000f0000000f0000000f0000000f00000011000000010000001400000018000000050000001900000001000000
         paramName:
         - boolVariable
         - boolValue
@@ -1627,8 +1636,11 @@ MonoBehaviour:
         - everyFrame
         - gameObject
         - sprite
-        paramDataPos: 0000000001000000000000000000000000000000020000000100000001000000000000000000000001000000020000000300000003000000020000000200000000000000
-        paramByteDataSize: 0000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000
+        - material
+        - color
+        - everyFrame
+        paramDataPos: 0000000001000000000000000000000000000000020000000100000001000000000000000000000001000000020000000300000003000000020000000200000000000000000000000100000003000000
+        paramByteDataSize: 0000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000
     - name: Display The Info In Bottom Right
       description: 
       colorIndex: 0
@@ -1647,15 +1659,18 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.UiTextSetText
         - HutongGames.PlayMaker.Actions.UiGraphicSetColor
         - GooglyEyesGames.PlayMaker.Actions.SetSVGImageSprite
+        - HutongGames.PlayMaker.Actions.SetAssetMaterialColor
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000040000000c000000
-        actionHashCodes: 09fbab04c9f57904fc838600
-        unityObjectParams: []
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000040000000c0000000e000000
+        actionHashCodes: 09fbab04c9f57904fc83860082591403
+        unityObjectParams:
+        - {fileID: 2100000, guid: bd12658acac8deb478dea9268cbe09a5, type: 2}
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 1
@@ -1690,14 +1705,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: sPlayerName
+          name: PLAYERS/BOTTOM/NAME
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 
         fsmObjectParams:
         - useVariable: 1
-          name: sprite
+          name: PLAYERS/BOTTOM/SPRITE
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1749,7 +1764,13 @@ MonoBehaviour:
         fsmVector3Params: []
         fsmColorParams:
         - useVariable: 1
-          name: playerColor
+          name: PLAYERS/BOTTOM/COLOR
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {r: 0, g: 0, b: 0, a: 1}
+        - useVariable: 1
+          name: PLAYERS/BOTTOM/COLOR
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1757,12 +1778,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000
+        byteData: 000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000110000000100000014000000190000000f0000000f0000000f0000000f00000011000000010000001400000018000000
+        paramDataType: 1400000012000000110000000100000014000000190000000f0000000f0000000f0000000f00000011000000010000001400000018000000050000001900000001000000
         paramName:
         - gameObject
         - text
@@ -1778,8 +1799,11 @@ MonoBehaviour:
         - everyFrame
         - gameObject
         - sprite
-        paramDataPos: 0000000000000000000000000000000001000000000000000000000001000000020000000300000001000000010000000200000000000000
-        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000
+        - material
+        - color
+        - everyFrame
+        paramDataPos: 0000000000000000000000000000000001000000000000000000000001000000020000000300000001000000010000000200000000000000000000000100000002000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000
     - name: Playroom Kit Get First Player Profile Info
       description: 
       colorIndex: 0
@@ -1822,20 +1846,20 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: sFirstPlayerId
+          name: PLAYERS/TOP/PLAYERID
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 
         - useVariable: 1
-          name: sPlayerName
+          name: PLAYERS/TOP/NAME
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 
         fsmObjectParams:
         - useVariable: 1
-          name: sprite
+          name: PLAYERS/TOP/SPRITE
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1851,7 +1875,7 @@ MonoBehaviour:
         fsmVector3Params: []
         fsmColorParams:
         - useVariable: 1
-          name: playerColor
+          name: PLAYERS/TOP/COLOR
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1994,7 +2018,7 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: sFirstPlayerId
+        - variableName: PLAYERS/TOP/PLAYERID
           objectType: UnityEngine.Object
           useVariable: 1
           type: 4
@@ -2106,7 +2130,7 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: sSecondPlayerId
+        - variableName: PLAYERS/BOTTOM/PLAYERID
           objectType: UnityEngine.Object
           useVariable: 1
           type: 4
@@ -2180,8 +2204,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 275.39062
-        y: 510.3047
+        x: 256.1875
+        y: 514.3047
         width: 295.6
         height: 32
       isBreakpoint: 0
@@ -2217,20 +2241,20 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: sSecondPlayerId
+          name: PLAYERS/BOTTOM/PLAYERID
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 
         - useVariable: 1
-          name: sPlayerName
+          name: PLAYERS/BOTTOM/NAME
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 
         fsmObjectParams:
         - useVariable: 1
-          name: sprite
+          name: PLAYERS/BOTTOM/SPRITE
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2246,7 +2270,7 @@ MonoBehaviour:
         fsmVector3Params: []
         fsmColorParams:
         - useVariable: 1
-          name: playerColor
+          name: PLAYERS/BOTTOM/COLOR
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2296,45 +2320,14 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      stringVariables:
-      - useVariable: 1
-        name: sPlayerName
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 
-      - useVariable: 1
-        name: sFirstPlayerId
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 
-      - useVariable: 1
-        name: sSecondPlayerId
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 
+      stringVariables: []
       vector2Variables: []
       vector3Variables: []
-      colorVariables:
-      - useVariable: 1
-        name: playerColor
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: {r: 0, g: 0, b: 0, a: 1}
+      colorVariables: []
       rectVariables: []
       quaternionVariables: []
       gameObjectVariables: []
-      objectVariables:
-      - useVariable: 1
-        name: sprite
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        typeName: UnityEngine.Sprite
-        value: {fileID: 0}
+      objectVariables: []
       materialVariables: []
       textureVariables: []
       arrayVariables:
@@ -2354,7 +2347,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -3770,7 +3763,7 @@ GameObject:
   - component: {fileID: 962020050}
   - component: {fileID: 962020049}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Gameboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
