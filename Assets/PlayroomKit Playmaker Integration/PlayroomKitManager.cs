@@ -8,6 +8,7 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit
     using AOT;
     using System;
     using System.Runtime.CompilerServices;
+    using System.Collections;
 
     public class PlayroomKitManager : MonoBehaviour
     {
@@ -53,9 +54,8 @@ WebGLInput.captureAllKeyboardInput = false;
 #endif
             PlayroomKit.InsertCoin(() =>
             {
-                PlayroomKit.OnPlayerJoin(PlayerJoined);
-                PlayMakerFSM.BroadcastEvent("PlayroomKit/InsertCoin");
 
+                StartCoroutine(DelayedInsertCoin());
 
 #if !UNITY_EDITOR && UNITY_WEBGL
             WebGLInput.captureAllKeyboardInput = true;
@@ -65,13 +65,23 @@ WebGLInput.captureAllKeyboardInput = false;
 
         }
 
+        private IEnumerator DelayedInsertCoin()
+        {
+            yield return new WaitForEndOfFrame();
+            PlayerReferenceDictionary = PlayroomKit.GetPlayers();
+            PlayroomKit.OnPlayerJoin(PlayerJoined);
+            PlayMakerFSM.BroadcastEvent("PlayroomKit/InsertCoin");
+        }
+
         private void PlayerJoined(PlayroomKit.Player player)
         {
             player.OnQuit(RemovePlayer);
             playerIds.Add(player.id);
             playerIds.Sort();
-
-            PlayerReferenceDictionary.Add(player.id, player);
+            if (PlayerReferenceDictionary.ContainsKey(player.id) == false)
+            {
+                PlayerReferenceDictionary.Add(player.id, player);
+            }
             Fsm.EventData.StringData = player.id;
             PlayMakerFSM.BroadcastEvent("PlayroomKit/OnPlayerJoin");
         }
