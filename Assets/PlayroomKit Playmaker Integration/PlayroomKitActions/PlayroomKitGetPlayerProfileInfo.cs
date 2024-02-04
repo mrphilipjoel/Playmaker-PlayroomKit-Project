@@ -74,7 +74,6 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
 
                     // Build a sprite with the tessellated geometry.
                     Sprite sprite = VectorUtils.BuildSprite(geoms, 100.0f, VectorUtils.Alignment.Center, Vector2.zero, 128, true);
-                    Debug.Log(sprite);
                     sprite.name = "SVGimage";
                     playerPhotoSprite.Value = sprite;
                 }

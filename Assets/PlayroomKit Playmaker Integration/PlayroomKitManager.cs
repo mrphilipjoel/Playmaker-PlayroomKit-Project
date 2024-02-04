@@ -7,11 +7,13 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit
     using static Playroom.PlayroomKit;
     using AOT;
     using System;
+    using System.Runtime.CompilerServices;
 
     public class PlayroomKitManager : MonoBehaviour
     {
         public static PlayroomKitManager Instance { get; private set; }
 
+        private static List<string> playerIds = new List<string>();
         private static Dictionary<string, GameObject> PlayerObjectDictionary = new();
         private static Dictionary<string, PlayroomKit.Player> PlayerReferenceDictionary = new();
 
@@ -51,7 +53,7 @@ WebGLInput.captureAllKeyboardInput = false;
 #endif
             PlayroomKit.InsertCoin(() =>
             {
-                PlayroomKit.OnPlayerJoin(PlaymakerOnPlayerJoin);
+                PlayroomKit.OnPlayerJoin(PlayerJoined);
                 PlayMakerFSM.BroadcastEvent("PlayroomKit/InsertCoin");
 
 
@@ -63,9 +65,12 @@ WebGLInput.captureAllKeyboardInput = false;
 
         }
 
-        private void PlaymakerOnPlayerJoin(PlayroomKit.Player player)
+        private void PlayerJoined(PlayroomKit.Player player)
         {
             player.OnQuit(RemovePlayer);
+            playerIds.Add(player.id);
+            playerIds.Sort();
+
             PlayerReferenceDictionary.Add(player.id, player);
             Fsm.EventData.StringData = player.id;
             PlayMakerFSM.BroadcastEvent("PlayroomKit/OnPlayerJoin");
@@ -102,6 +107,11 @@ WebGLInput.captureAllKeyboardInput = false;
                 Debug.LogWarning("PlayerID not in dictionary!");
                 return null;
             }
+        }
+
+        public int GetPlayerIndex(string playerID)
+        {
+            return playerIds.IndexOf(playerID);
         }
     }
 }
