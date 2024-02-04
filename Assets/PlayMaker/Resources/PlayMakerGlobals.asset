@@ -85,3 +85,4 @@ MonoBehaviour:
   - PlayroomKit/InsertCoin
   - PlayroomKit/OnPlayerJoin
   - GAME MANAGER/BEGIN
+  - BOARD ACTIVITY/Clicked Space

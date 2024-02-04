@@ -738,7 +738,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 190319235}
-  - component: {fileID: 190319236}
   m_Layer: 0
   m_Name: RowA.3
   m_TagString: Untagged
@@ -769,65 +768,6 @@ Transform:
   - {fileID: 1135267645}
   m_Father: {fileID: 962020050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &190319236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190319234}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00099f8dbc7fe484e8846dd5c9a6e97d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayoutElements:
-  - {fileID: 182690816}
-  - {fileID: 2097230590}
-  - {fileID: 955585396}
-  - {fileID: 542030092}
-  - {fileID: 898122666}
-  - {fileID: 684572568}
-  - {fileID: 2068606461}
-  - {fileID: 1135267645}
-  ElementDimensions: {x: 1, y: 1, z: 1}
-  Spacing: 0
-  Style: 0
-  GridConstraintCount: 0
-  SecondaryConstraintCount: 0
-  UseFullCircle: 0
-  MaxArcAngle: 0
-  Radius: 1
-  StartAngleOffset: 0
-  AlignToRadius: 0
-  RadialSymmetricalAboutStart: 0
-  PrimaryAlignmentAxis: 2
-  SecondaryAlignmentAxis: 1
-  LayoutAxis: 0
-  SecondaryLayoutAxis: 1
-  ElementRotations:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  StartPositionOffset: {x: 0, y: 0, z: 0}
-  SpiralFactor: 0
-  PrimaryAlignment: 1
-  SecondaryAlignment: 0
-  TertiaryAlignment: 0
-  NeedsRebuild: 0
-  ForceContinuousRebuild: 0
-  IgnoreDeactivatedElements: 1
-  DrawGizmos: 0
-  GizmoScale: 1
-  GizmoPrimaryColor: {r: 1, g: 1, b: 1, a: 1}
-  GizmoSecondaryColor: {r: 0, g: 1, b: 0, a: 1}
-  GizmoTertiaryColor: {r: 1, g: 0, b: 0, a: 1}
-  ShowGizmoSettings: 0
 --- !u!1001 &215161875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1298,6 +1238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430996358}
   - component: {fileID: 430996357}
+  - component: {fileID: 430996359}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2519,6 +2460,445 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &430996359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430996356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 0}
+    name: MOUSE DOWN Event Manager
+    startState: Get Mouse Button Down
+    states:
+    - name: Get Mouse Button Down
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 187.6
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Left Mouse Button Clicked
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Mouse Pick
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetMouseButtonDown
+        customNames:
+        - Get Mouse Button Down
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 34b46c04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Left Mouse Button Clicked
+        byteData: 0000000001
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 07000000170000001100000001000000
+        paramName:
+        - button
+        - sendEvent
+        - storeResult
+        - inUpdateOnly
+        paramDataPos: 00000000000000000000000004000000
+        paramByteDataSize: 04000000000000000000000001000000
+    - name: Mouse Pick
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 96.59375
+        y: 175.59375
+        width: 100
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Get Mouse Button Down
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Hit a Space
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Send Event 'Clicked Space'
+        linkStyle: 0
+        linkConstraint: 2
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.MousePick
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 000000000a000000
+        actionHashCodes: 872f9002a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: goHitSpace
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 100
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 6
+        fsmBoolParams:
+        - useVariable: 1
+          name: bDidPickObject
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bDidPickObject
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Hit a Space
+        - FINISHED
+        byteData: 0000
+        arrayParamSizes: 01000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmInt
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f00000011000000130000001c0000001c0000000f0000000c00000010000000110000000100000011000000170000001700000001000000
+        paramName:
+        - rayDistance
+        - storeDidPickObject
+        - storeGameObject
+        - storePoint
+        - storeNormal
+        - storeDistance
+        - layerMask
+        - 
+        - invertMask
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 0000000000000000000000000000000001000000010000000000000000000000010000000000000002000000000000000100000001000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+    - name: Send Event 'Clicked Space'
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 73
+        y: 260.59375
+        width: 192.4
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Get Mouse Button Down
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEvent
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: 5e69bb0488611604
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: goHitSpace
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - BOARD ACTIVITY/Clicked Space
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000170000000f0000000100000017000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        - sendEvent
+        paramDataPos: 0000000000000000000000000000000001000000
+        paramByteDataSize: 0000000000000000000000000100000000000000
+    events:
+    - name: Left Mouse Button Clicked
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Hit a Space
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: BOARD ACTIVITY/Clicked Space
+      isSystemEvent: 0
+      isGlobal: 1
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables:
+      - useVariable: 1
+        name: bDidPickObject
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables:
+      - useVariable: 1
+        name: goHitSpace
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs: 0000000000000000
+    description: 
+    docUrl: 
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    outVariableIndices: 
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    OutputEvents: []
+    RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 225
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
+  fsmTemplate: {fileID: 0}
+  eventHandlerComponentsAdded: 0
 --- !u!1001 &433094934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2669,7 +3049,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483725893}
-  - component: {fileID: 483725894}
   m_Layer: 0
   m_Name: RowA.1
   m_TagString: Untagged
@@ -2700,65 +3079,6 @@ Transform:
   - {fileID: 1455031233}
   m_Father: {fileID: 962020050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &483725894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483725892}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00099f8dbc7fe484e8846dd5c9a6e97d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayoutElements:
-  - {fileID: 316509650}
-  - {fileID: 1855022783}
-  - {fileID: 1070836504}
-  - {fileID: 1122349489}
-  - {fileID: 1153896172}
-  - {fileID: 224106779}
-  - {fileID: 1803733283}
-  - {fileID: 1455031233}
-  ElementDimensions: {x: 1, y: 1, z: 1}
-  Spacing: 0
-  Style: 0
-  GridConstraintCount: 0
-  SecondaryConstraintCount: 0
-  UseFullCircle: 0
-  MaxArcAngle: 0
-  Radius: 1
-  StartAngleOffset: 0
-  AlignToRadius: 0
-  RadialSymmetricalAboutStart: 0
-  PrimaryAlignmentAxis: 2
-  SecondaryAlignmentAxis: 1
-  LayoutAxis: 0
-  SecondaryLayoutAxis: 1
-  ElementRotations:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  StartPositionOffset: {x: 0, y: 0, z: 0}
-  SpiralFactor: 0
-  PrimaryAlignment: 1
-  SecondaryAlignment: 0
-  TertiaryAlignment: 0
-  NeedsRebuild: 0
-  ForceContinuousRebuild: 0
-  IgnoreDeactivatedElements: 1
-  DrawGizmos: 0
-  GizmoScale: 1
-  GizmoPrimaryColor: {r: 1, g: 1, b: 1, a: 1}
-  GizmoSecondaryColor: {r: 0, g: 1, b: 0, a: 1}
-  GizmoTertiaryColor: {r: 1, g: 0, b: 0, a: 1}
-  ShowGizmoSettings: 0
 --- !u!1001 &542030091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2830,7 +3150,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543227186}
-  - component: {fileID: 543227187}
   m_Layer: 0
   m_Name: RowA.6
   m_TagString: Untagged
@@ -2861,65 +3180,6 @@ Transform:
   - {fileID: 702483016}
   m_Father: {fileID: 962020050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &543227187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543227185}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00099f8dbc7fe484e8846dd5c9a6e97d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayoutElements:
-  - {fileID: 1315409832}
-  - {fileID: 1908563380}
-  - {fileID: 636368929}
-  - {fileID: 108110699}
-  - {fileID: 1462568699}
-  - {fileID: 2113216952}
-  - {fileID: 708919204}
-  - {fileID: 702483016}
-  ElementDimensions: {x: 1, y: 1, z: 1}
-  Spacing: 0
-  Style: 0
-  GridConstraintCount: 0
-  SecondaryConstraintCount: 0
-  UseFullCircle: 0
-  MaxArcAngle: 0
-  Radius: 1
-  StartAngleOffset: 0
-  AlignToRadius: 0
-  RadialSymmetricalAboutStart: 0
-  PrimaryAlignmentAxis: 2
-  SecondaryAlignmentAxis: 1
-  LayoutAxis: 0
-  SecondaryLayoutAxis: 1
-  ElementRotations:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  StartPositionOffset: {x: 0, y: 0, z: 0}
-  SpiralFactor: 0
-  PrimaryAlignment: 1
-  SecondaryAlignment: 0
-  TertiaryAlignment: 0
-  NeedsRebuild: 0
-  ForceContinuousRebuild: 0
-  IgnoreDeactivatedElements: 1
-  DrawGizmos: 0
-  GizmoScale: 1
-  GizmoPrimaryColor: {r: 1, g: 1, b: 1, a: 1}
-  GizmoSecondaryColor: {r: 0, g: 1, b: 0, a: 1}
-  GizmoTertiaryColor: {r: 1, g: 0, b: 0, a: 1}
-  ShowGizmoSettings: 0
 --- !u!1 &601661925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,7 +3189,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 601661926}
-  - component: {fileID: 601661927}
   m_Layer: 0
   m_Name: RowA.7
   m_TagString: Untagged
@@ -2960,65 +3219,6 @@ Transform:
   - {fileID: 1958337472}
   m_Father: {fileID: 962020050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &601661927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601661925}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00099f8dbc7fe484e8846dd5c9a6e97d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayoutElements:
-  - {fileID: 317133482}
-  - {fileID: 1629935781}
-  - {fileID: 846609779}
-  - {fileID: 1762283836}
-  - {fileID: 1406409950}
-  - {fileID: 1912877289}
-  - {fileID: 1846978111}
-  - {fileID: 1958337472}
-  ElementDimensions: {x: 1, y: 1, z: 1}
-  Spacing: 0
-  Style: 0
-  GridConstraintCount: 0
-  SecondaryConstraintCount: 0
-  UseFullCircle: 0
-  MaxArcAngle: 0
-  Radius: 1
-  StartAngleOffset: 0
-  AlignToRadius: 0
-  RadialSymmetricalAboutStart: 0
-  PrimaryAlignmentAxis: 2
-  SecondaryAlignmentAxis: 1
-  LayoutAxis: 0
-  SecondaryLayoutAxis: 1
-  ElementRotations:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  StartPositionOffset: {x: 0, y: 0, z: 0}
-  SpiralFactor: 0
-  PrimaryAlignment: 1
-  SecondaryAlignment: 0
-  TertiaryAlignment: 0
-  NeedsRebuild: 0
-  ForceContinuousRebuild: 0
-  IgnoreDeactivatedElements: 1
-  DrawGizmos: 0
-  GizmoScale: 1
-  GizmoPrimaryColor: {r: 1, g: 1, b: 1, a: 1}
-  GizmoSecondaryColor: {r: 0, g: 1, b: 0, a: 1}
-  GizmoTertiaryColor: {r: 1, g: 0, b: 0, a: 1}
-  ShowGizmoSettings: 0
 --- !u!1001 &636368928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3498,7 +3698,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 745994158}
-  - component: {fileID: 745994159}
   m_Layer: 0
   m_Name: RowA.2
   m_TagString: Untagged
@@ -3529,65 +3728,6 @@ Transform:
   - {fileID: 1597031754}
   m_Father: {fileID: 962020050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &745994159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745994157}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00099f8dbc7fe484e8846dd5c9a6e97d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayoutElements:
-  - {fileID: 17370010}
-  - {fileID: 321823291}
-  - {fileID: 1269745009}
-  - {fileID: 1971608581}
-  - {fileID: 742903369}
-  - {fileID: 1001156250}
-  - {fileID: 1330522968}
-  - {fileID: 1597031754}
-  ElementDimensions: {x: 1, y: 1, z: 1}
-  Spacing: 0
-  Style: 0
-  GridConstraintCount: 0
-  SecondaryConstraintCount: 0
-  UseFullCircle: 0
-  MaxArcAngle: 0
-  Radius: 1
-  StartAngleOffset: 0
-  AlignToRadius: 0
-  RadialSymmetricalAboutStart: 0
-  PrimaryAlignmentAxis: 2
-  SecondaryAlignmentAxis: 1
-  LayoutAxis: 0
-  SecondaryLayoutAxis: 1
-  ElementRotations:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  StartPositionOffset: {x: 0, y: 0, z: 0}
-  SpiralFactor: 0
-  PrimaryAlignment: 1
-  SecondaryAlignment: 0
-  TertiaryAlignment: 0
-  NeedsRebuild: 0
-  ForceContinuousRebuild: 0
-  IgnoreDeactivatedElements: 1
-  DrawGizmos: 0
-  GizmoScale: 1
-  GizmoPrimaryColor: {r: 1, g: 1, b: 1, a: 1}
-  GizmoSecondaryColor: {r: 0, g: 1, b: 0, a: 1}
-  GizmoTertiaryColor: {r: 1, g: 0, b: 0, a: 1}
-  ShowGizmoSettings: 0
 --- !u!1 &837930331
 GameObject:
   m_ObjectHideFlags: 0
@@ -3870,7 +4010,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 962020050}
-  - component: {fileID: 962020049}
   m_Layer: 0
   m_Name: Gameboard
   m_TagString: Untagged
@@ -3878,65 +4017,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &962020049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962020048}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00099f8dbc7fe484e8846dd5c9a6e97d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayoutElements:
-  - {fileID: 1005975401}
-  - {fileID: 483725893}
-  - {fileID: 745994158}
-  - {fileID: 190319235}
-  - {fileID: 1305303384}
-  - {fileID: 1309655941}
-  - {fileID: 543227186}
-  - {fileID: 601661926}
-  ElementDimensions: {x: 1, y: 1, z: 1}
-  Spacing: 0
-  Style: 0
-  GridConstraintCount: 0
-  SecondaryConstraintCount: 0
-  UseFullCircle: 0
-  MaxArcAngle: 0
-  Radius: 1
-  StartAngleOffset: 0
-  AlignToRadius: 0
-  RadialSymmetricalAboutStart: 0
-  PrimaryAlignmentAxis: 2
-  SecondaryAlignmentAxis: 1
-  LayoutAxis: 1
-  SecondaryLayoutAxis: 1
-  ElementRotations:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  StartPositionOffset: {x: 0, y: 0, z: 0}
-  SpiralFactor: 0
-  PrimaryAlignment: 1
-  SecondaryAlignment: 0
-  TertiaryAlignment: 0
-  NeedsRebuild: 0
-  ForceContinuousRebuild: 0
-  IgnoreDeactivatedElements: 1
-  DrawGizmos: 0
-  GizmoScale: 1
-  GizmoPrimaryColor: {r: 1, g: 1, b: 1, a: 1}
-  GizmoSecondaryColor: {r: 0, g: 1, b: 0, a: 1}
-  GizmoTertiaryColor: {r: 1, g: 0, b: 0, a: 1}
-  ShowGizmoSettings: 0
 --- !u!4 &962020050
 Transform:
   m_ObjectHideFlags: 0
@@ -3971,7 +4051,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4053,22 +4132,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EventMask:
-    serializedVersion: 2
-    m_Bits: 64
-  m_MaxRayIntersections: 0
 --- !u!1001 &976382066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4351,7 +4414,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1005975401}
-  - component: {fileID: 1005975402}
   m_Layer: 0
   m_Name: RowA
   m_TagString: Untagged
@@ -4382,65 +4444,6 @@ Transform:
   - {fileID: 2111489548}
   m_Father: {fileID: 962020050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1005975402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005975400}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00099f8dbc7fe484e8846dd5c9a6e97d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayoutElements:
-  - {fileID: 5446958699556196172}
-  - {fileID: 64863123}
-  - {fileID: 704984921}
-  - {fileID: 1866376683}
-  - {fileID: 1157618145}
-  - {fileID: 976382067}
-  - {fileID: 1601388981}
-  - {fileID: 2111489548}
-  ElementDimensions: {x: 1, y: 1, z: 1}
-  Spacing: 0
-  Style: 0
-  GridConstraintCount: 0
-  SecondaryConstraintCount: 0
-  UseFullCircle: 0
-  MaxArcAngle: 0
-  Radius: 1
-  StartAngleOffset: 0
-  AlignToRadius: 0
-  RadialSymmetricalAboutStart: 0
-  PrimaryAlignmentAxis: 2
-  SecondaryAlignmentAxis: 1
-  LayoutAxis: 0
-  SecondaryLayoutAxis: 1
-  ElementRotations:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  StartPositionOffset: {x: 0, y: 0, z: 0}
-  SpiralFactor: 0
-  PrimaryAlignment: 1
-  SecondaryAlignment: 0
-  TertiaryAlignment: 0
-  NeedsRebuild: 0
-  ForceContinuousRebuild: 0
-  IgnoreDeactivatedElements: 1
-  DrawGizmos: 0
-  GizmoScale: 1
-  GizmoPrimaryColor: {r: 1, g: 1, b: 1, a: 1}
-  GizmoSecondaryColor: {r: 0, g: 1, b: 0, a: 1}
-  GizmoTertiaryColor: {r: 1, g: 0, b: 0, a: 1}
-  ShowGizmoSettings: 0
 --- !u!1001 &1070836503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4892,7 +4895,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1305303384}
-  - component: {fileID: 1305303385}
   m_Layer: 0
   m_Name: RowA.4
   m_TagString: Untagged
@@ -4923,65 +4925,6 @@ Transform:
   - {fileID: 1676831876}
   m_Father: {fileID: 962020050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1305303385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305303383}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00099f8dbc7fe484e8846dd5c9a6e97d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayoutElements:
-  - {fileID: 433094935}
-  - {fileID: 74118942}
-  - {fileID: 1606220866}
-  - {fileID: 101418366}
-  - {fileID: 1995270488}
-  - {fileID: 2120531239}
-  - {fileID: 2010498923}
-  - {fileID: 1676831876}
-  ElementDimensions: {x: 1, y: 1, z: 1}
-  Spacing: 0
-  Style: 0
-  GridConstraintCount: 0
-  SecondaryConstraintCount: 0
-  UseFullCircle: 0
-  MaxArcAngle: 0
-  Radius: 1
-  StartAngleOffset: 0
-  AlignToRadius: 0
-  RadialSymmetricalAboutStart: 0
-  PrimaryAlignmentAxis: 2
-  SecondaryAlignmentAxis: 1
-  LayoutAxis: 0
-  SecondaryLayoutAxis: 1
-  ElementRotations:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  StartPositionOffset: {x: 0, y: 0, z: 0}
-  SpiralFactor: 0
-  PrimaryAlignment: 1
-  SecondaryAlignment: 0
-  TertiaryAlignment: 0
-  NeedsRebuild: 0
-  ForceContinuousRebuild: 0
-  IgnoreDeactivatedElements: 1
-  DrawGizmos: 0
-  GizmoScale: 1
-  GizmoPrimaryColor: {r: 1, g: 1, b: 1, a: 1}
-  GizmoSecondaryColor: {r: 0, g: 1, b: 0, a: 1}
-  GizmoTertiaryColor: {r: 1, g: 0, b: 0, a: 1}
-  ShowGizmoSettings: 0
 --- !u!1 &1309655940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4991,7 +4934,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1309655941}
-  - component: {fileID: 1309655942}
   m_Layer: 0
   m_Name: RowA.5
   m_TagString: Untagged
@@ -5022,65 +4964,6 @@ Transform:
   - {fileID: 1166417907}
   m_Father: {fileID: 962020050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1309655942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309655940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00099f8dbc7fe484e8846dd5c9a6e97d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LayoutElements:
-  - {fileID: 999711464}
-  - {fileID: 1902054635}
-  - {fileID: 215161876}
-  - {fileID: 1976941876}
-  - {fileID: 5851974}
-  - {fileID: 1915873300}
-  - {fileID: 301797467}
-  - {fileID: 1166417907}
-  ElementDimensions: {x: 1, y: 1, z: 1}
-  Spacing: 0
-  Style: 0
-  GridConstraintCount: 0
-  SecondaryConstraintCount: 0
-  UseFullCircle: 0
-  MaxArcAngle: 0
-  Radius: 1
-  StartAngleOffset: 0
-  AlignToRadius: 0
-  RadialSymmetricalAboutStart: 0
-  PrimaryAlignmentAxis: 2
-  SecondaryAlignmentAxis: 1
-  LayoutAxis: 0
-  SecondaryLayoutAxis: 1
-  ElementRotations:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  StartPositionOffset: {x: 0, y: 0, z: 0}
-  SpiralFactor: 0
-  PrimaryAlignment: 1
-  SecondaryAlignment: 0
-  TertiaryAlignment: 0
-  NeedsRebuild: 0
-  ForceContinuousRebuild: 0
-  IgnoreDeactivatedElements: 1
-  DrawGizmos: 0
-  GizmoScale: 1
-  GizmoPrimaryColor: {r: 1, g: 1, b: 1, a: 1}
-  GizmoSecondaryColor: {r: 0, g: 1, b: 0, a: 1}
-  GizmoTertiaryColor: {r: 1, g: 0, b: 0, a: 1}
-  ShowGizmoSettings: 0
 --- !u!1001 &1315409831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7355,8 +7238,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 1467641841}
-  - {fileID: 430996358}
   - {fileID: 1699182616}
   - {fileID: 340680458}
+  - {fileID: 1467641841}
+  - {fileID: 430996358}
   - {fileID: 962020050}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6638686241880265267}
   - component: {fileID: 8125106845964872147}
   - component: {fileID: 8725656505761277368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BoardSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 317.1953
+        x: 237.19531
         y: 116.796875
         width: 171.6
         height: 32
@@ -261,7 +261,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 324.39844
+        x: 244.39844
         y: 189.39062
         width: 156.4
         height: 32
@@ -334,18 +334,18 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 333.59375
-        y: 729.3906
-        width: 136
+        x: 227.19531
+        y: 725.3828
+        width: 222.8
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: MOUSE DOWN
-          isSystemEvent: 1
-          isGlobal: 0
+          name: BOARD ACTIVITY/Clicked Space
+          isSystemEvent: 0
+          isGlobal: 1
         toState: Add Deselect Logic Here
         linkStyle: 0
         linkConstraint: 2
@@ -460,23 +460,23 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000001000000000000000100000001000000000000000000000001000000020000000300000000000000000000000200000002000000
         paramByteDataSize: 000000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: Wait for Mouse Down
+    - name: Wait for Picked Event
       description: 
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 325.0078
-        y: 548.8047
-        width: 152.4
+        x: 220.20312
+        y: 548.7969
+        width: 222.8
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: MOUSE DOWN
-          isSystemEvent: 1
-          isGlobal: 0
+          name: BOARD ACTIVITY/Clicked Space
+          isSystemEvent: 0
+          isGlobal: 1
         toState: Check if There is a Piece on This Space
         linkStyle: 0
         linkConstraint: 2
@@ -526,7 +526,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 317.1953
+        x: 237.19531
         y: 809.6094
         width: 178
         height: 32
@@ -538,7 +538,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Wait for Mouse Down
+        toState: Wait for Picked Event
         linkStyle: 0
         linkConstraint: 1
         linkTarget: 0
@@ -587,10 +587,10 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 332.40625
+        x: 252.40625
         y: 256.6875
         width: 140.4
-        height: 48
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -611,6 +611,15 @@ MonoBehaviour:
         toState: bIsTopPlayer = false
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Wait for Picked Event
+        linkStyle: 0
+        linkConstraint: 2
         linkTarget: 0
         colorIndex: 0
       actionData:
@@ -758,7 +767,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 137.79688
+        x: 57.796875
         y: 392.28906
         width: 147.6
         height: 32
@@ -770,7 +779,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Wait for Mouse Down
+        toState: Wait for Picked Event
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -921,7 +930,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 513.3125
+        x: 433.3125
         y: 383.39844
         width: 153.2
         height: 32
@@ -933,9 +942,9 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Wait for Mouse Down
+        toState: Wait for Picked Event
         linkStyle: 0
-        linkConstraint: 0
+        linkConstraint: 2
         linkTarget: 0
         colorIndex: 0
       actionData:
@@ -1084,7 +1093,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 150.35938
+        x: 70.359375
         y: 112.99219
         width: 100
         height: 16
@@ -1136,7 +1145,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 268.39844
+        x: 188.39844
         y: 629.1797
         width: 263.6
         height: 48
@@ -1157,7 +1166,7 @@ MonoBehaviour:
           name: no piece here
           isSystemEvent: 0
           isGlobal: 0
-        toState: Wait for Mouse Down
+        toState: Wait for Picked Event
         linkStyle: 0
         linkConstraint: 1
         linkTarget: 0
@@ -1347,6 +1356,9 @@ MonoBehaviour:
     - name: MOUSE DOWN
       isSystemEvent: 1
       isGlobal: 0
+    - name: BOARD ACTIVITY/Clicked Space
+      isSystemEvent: 0
+      isGlobal: 1
     globalTransitions:
     - fsmEvent:
         name: GAME MANAGER/BEGIN
