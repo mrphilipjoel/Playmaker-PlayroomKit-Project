@@ -84,3 +84,4 @@ MonoBehaviour:
   events:
   - PlayroomKit/InsertCoin
   - PlayroomKit/OnPlayerJoin
+  - GAME MANAGER/BEGIN
