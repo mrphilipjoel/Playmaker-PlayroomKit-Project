@@ -1724,8 +1724,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 405.53906
-        y: 1105.7812
+        x: 402.34375
+        y: 1212.9766
         width: 154.8
         height: 32
       isBreakpoint: 0
@@ -1923,8 +1923,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 394.4453
-        y: 1036.5781
+        x: 399.25
+        y: 1147.7734
         width: 187.6
         height: 32
       isBreakpoint: 0
@@ -2075,14 +2075,14 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
     - name: Check Spaces are within 1.5 Units
-      description: 
+      description: If Greater than 2 and Less than 3, check to jump
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 370
         y: 959.9922
-        width: 228.4
-        height: 48
+        width: 268.4
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -2105,17 +2105,30 @@ MonoBehaviour:
         linkConstraint: 1
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: Check for valid Jump
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: 'TODO:  Check for Valid Jump'
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetDistance
+        - HutongGames.PlayMaker.Actions.DebugLog
         - HutongGames.PlayMaker.Actions.FloatCompare
+        - HutongGames.PlayMaker.Actions.FloatSwitch
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: 36f094001bcdca04
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000004000000070000000e000000
+        actionHashCodes: 36f094009c59e5011bcdca0441159400
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -2139,7 +2152,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: fDistanceBetweenSpaces
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -2169,6 +2188,30 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1.5
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2.5
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -2180,17 +2223,25 @@ MonoBehaviour:
         - invalid space
         - Safe to Set as goFinishSpace
         - invalid space
-        byteData: 0100
-        arrayParamSizes: 
-        arrayParamTypes: []
+        - Safe to Set as goFinishSpace
+        - invalid space
+        - Check for valid Jump
+        byteData: 0000000000010000
+        arrayParamSizes: 0300000003000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmFloat
+        - HutongGames.PlayMaker.FsmEvent
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000130000000f000000010000000f0000000f0000000f00000017000000170000001700000001000000
+        paramDataType: 14000000130000000f000000010000000700000012000000010000000f0000000f0000000f000000170000001700000017000000010000000f0000000c0000000f0000000f0000000f0000000c00000017000000170000001700000001000000
         paramName:
         - gameObject
         - target
         - storeResult
         - everyFrame
+        - logLevel
+        - text
+        - sendToUnityLog
         - float1
         - float2
         - tolerance
@@ -2198,8 +2249,70 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 0000000000000000000000000000000001000000020000000300000000000000010000000200000001000000
-        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000000000001000000
+        - floatVariable
+        - lessThan
+        - 
+        - 
+        - 
+        - sendEvent
+        - 
+        - 
+        - 
+        - everyFrame
+        paramDataPos: 000000000000000000000000000000000100000000000000050000000100000002000000030000000000000001000000020000000600000004000000000000000500000006000000070000000100000003000000040000000500000007000000
+        paramByteDataSize: 000000000000000000000000010000000400000000000000010000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+    - name: 'TODO:  Check for Valid Jump'
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 386.39062
+        y: 1094.9922
+        width: 202
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: this is a black space
       isSystemEvent: 0
@@ -2238,6 +2351,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: invalid space
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Check for valid Jump
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -2329,7 +2445,8 @@ MonoBehaviour:
       categories:
       - 
       variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-    description: 
+    description: 'Next -If distance greater than 1.5, raycast to see if we hit piece
+      of opposing player. '
     docUrl: 
     showStateLabel: 0
     maxLoopCount: 0
