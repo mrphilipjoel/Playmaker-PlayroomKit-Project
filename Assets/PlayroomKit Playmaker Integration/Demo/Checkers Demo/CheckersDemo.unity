@@ -1261,7 +1261,7 @@ MonoBehaviour:
   fsm:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
-    name: GameManager
+    name: Game Setup
     startState: State 1
     states:
     - name: State 1
