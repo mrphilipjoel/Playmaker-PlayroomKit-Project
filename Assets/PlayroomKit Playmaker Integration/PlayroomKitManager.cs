@@ -21,9 +21,11 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit
         [Header("PlayroomKit Options")]
         public bool streamMode = false;
         public bool allowGamepads = false;
-        public int maxPlayersPerRoom = 4;
+        public int maxPlayers = 4;
         public bool skipLobby = false;
         public int reconnectGracePeriodInSeconds = 30;
+
+        PlayroomKit.InitOptions options;
         private void Awake()
         {
             if (Instance == null)
@@ -36,14 +38,14 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit
             streamMode = true;
             int randomInt = UnityEngine.Random.Range(1111, 9999);
 #endif
-            PlayroomKit.InitOptions options = new PlayroomKit.InitOptions
+            options = new PlayroomKit.InitOptions
             {
 #if UNITY_EDITOR
                 roomCode = randomInt.ToString(),
 #endif
                 streamMode = streamMode,
                 allowGamepads = allowGamepads,
-                maxPlayersPerRoom = maxPlayersPerRoom,
+                maxPlayersPerRoom = maxPlayers,
                 skipLobby = skipLobby,
                 reconnectGracePeriod = reconnectGracePeriodInSeconds * 1000,
             };
@@ -60,7 +62,7 @@ WebGLInput.captureAllKeyboardInput = false;
 #if !UNITY_EDITOR && UNITY_WEBGL
             WebGLInput.captureAllKeyboardInput = true;
 #endif
-            });
+            }, options);
 
 
         }

@@ -130,7 +130,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 381.1953
+        x: 429.1953
         y: 116.796875
         width: 171.6
         height: 32
@@ -261,7 +261,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 388.39844
+        x: 436.39844
         y: 189.39062
         width: 156.4
         height: 32
@@ -334,8 +334,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 365.8672
-        y: 775.66406
+        x: 91.15625
+        y: 899.1094
         width: 222.8
         height: 32
       isBreakpoint: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 371.85938
+        x: 419.85938
         y: 488.3672
         width: 222.8
         height: 32
@@ -526,7 +526,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 396.40625
+        x: 444.40625
         y: 256.6875
         width: 140.4
         height: 64
@@ -706,7 +706,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 201.79688
+        x: 249.79688
         y: 392.28906
         width: 147.6
         height: 32
@@ -869,7 +869,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 577.3125
+        x: 625.3125
         y: 383.39844
         width: 153.2
         height: 32
@@ -1032,7 +1032,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 214.35938
+        x: 262.35938
         y: 112.99219
         width: 100
         height: 16
@@ -1134,8 +1134,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 341.35156
-        y: 630.7344
+        x: 60.085938
+        y: 688.60156
         width: 263.6
         height: 48
       isBreakpoint: 0
@@ -1325,7 +1325,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 370.20312
+        x: 418.20312
         y: 557.5625
         width: 212.4
         height: 48
@@ -1339,7 +1339,7 @@ MonoBehaviour:
           isGlobal: 0
         toState: Check if There is a Piece on This Space
         linkStyle: 0
-        linkConstraint: 2
+        linkConstraint: 1
         linkTarget: 0
         colorIndex: 7
       - fsmEvent:
@@ -1437,8 +1437,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 381.96094
-        y: 712.2656
+        x: 102.00781
+        y: 795.0547
         width: 182
         height: 32
       isBreakpoint: 0
@@ -1533,8 +1533,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 341.47656
-        y: 864.77344
+        x: 739.8203
+        y: 620.6953
         width: 274
         height: 48
       isBreakpoint: 0
@@ -1724,10 +1724,10 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 402.34375
-        y: 1212.9766
-        width: 154.8
-        height: 32
+        x: 435.5703
+        y: 979.66406
+        width: 152.4
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -1741,6 +1741,15 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: handle jump
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Deactive Piece to Jump
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetPosition
@@ -1748,16 +1757,18 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetGameObject
         - HutongGames.PlayMaker.Actions.SetGameObject
         - HutongGames.PlayMaker.Actions.SetGameObject
+        - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
         - 
         - 
         - 
         - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 00000000080000000c0000000f00000012000000
-        actionHashCodes: f6e5be035e69bb044d51cf044d51cf044d51cf04
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 010101010101
+        actionStartIndex: 00000000080000000c0000000f0000001200000015000000
+        actionHashCodes: f6e5be035e69bb044d51cf044d51cf044d51cf04a4c8bf00
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1874,7 +1885,13 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: bValidJump
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
@@ -1888,12 +1905,14 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - BOARD ACTIVITY/Clicked Space
-        byteData: 00000000000000000000
+        - handle jump
+        - FINISHED
+        byteData: 0000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f0000000700000001000000010000001f000000170000000f00000001000000130000001300000001000000130000001300000001000000130000001300000001000000
+        paramDataType: 140000001c0000000f0000000f0000000f0000000700000001000000010000001f000000170000000f0000000100000013000000130000000100000013000000130000000100000013000000130000000100000011000000170000001700000001000000
         paramName:
         - gameObject
         - vector
@@ -1916,15 +1935,19 @@ MonoBehaviour:
         - variable
         - gameObject
         - everyFrame
-        paramDataPos: 000000000000000000000000010000000200000000000000040000000500000000000000000000000300000006000000000000000100000007000000020000000300000008000000040000000500000009000000
-        paramByteDataSize: 000000000000000000000000000000000000000004000000010000000100000000000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000001000000
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 0000000000000000000000000100000002000000000000000400000005000000000000000000000003000000060000000000000001000000070000000200000003000000080000000400000005000000090000000000000001000000020000000a000000
+        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000010000000000000000000000000000000100000000000000000000000100000000000000000000000100000000000000000000000100000000000000000000000000000001000000
     - name: Set This as goFinishSpace
       description: 
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 399.25
-        y: 1147.7734
+        x: 779.4844
+        y: 987.8047
         width: 187.6
         height: 32
       isBreakpoint: 0
@@ -1937,7 +1960,7 @@ MonoBehaviour:
           isGlobal: 0
         toState: Move Selected Piece
         linkStyle: 0
-        linkConstraint: 2
+        linkConstraint: 1
         linkTarget: 0
         colorIndex: 0
       actionData:
@@ -2001,9 +2024,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 60.335938
-        y: 644
-        width: 143.6
+        x: 50.734375
+        y: 505.59375
+        width: 147.6
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -2076,12 +2099,12 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000
     - name: Check Spaces are within 1.5 Units
       description: If Greater than 2 and Less than 3, check to jump
-      colorIndex: 0
+      colorIndex: 3
       position:
         serializedVersion: 2
-        x: 370
-        y: 959.9922
-        width: 268.4
+        x: 749.1406
+        y: 711.89844
+        width: 274
         height: 64
       isBreakpoint: 0
       isSequence: 0
@@ -2109,7 +2132,7 @@ MonoBehaviour:
           name: Check for valid Jump
           isSystemEvent: 0
           isGlobal: 0
-        toState: 'TODO:  Check for Valid Jump'
+        toState: Check for Valid Jump
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2118,17 +2141,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetDistance
         - HutongGames.PlayMaker.Actions.DebugLog
-        - HutongGames.PlayMaker.Actions.FloatCompare
         - HutongGames.PlayMaker.Actions.FloatSwitch
         customNames:
         - 
         - 
         - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000004000000070000000e000000
-        actionHashCodes: 36f094009c59e5011bcdca0441159400
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000400000007000000
+        actionHashCodes: 36f094009c59e50141159400
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -2187,24 +2208,6 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1.5
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
           value: 2.5
         - useVariable: 0
           name: 
@@ -2220,20 +2223,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - invalid space
-        - Safe to Set as goFinishSpace
-        - invalid space
         - Safe to Set as goFinishSpace
         - invalid space
         - Check for valid Jump
-        byteData: 0000000000010000
+        byteData: 00000000000100
         arrayParamSizes: 0300000003000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmFloat
         - HutongGames.PlayMaker.FsmEvent
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000130000000f000000010000000700000012000000010000000f0000000f0000000f000000170000001700000017000000010000000f0000000c0000000f0000000f0000000f0000000c00000017000000170000001700000001000000
+        paramDataType: 14000000130000000f000000010000000700000012000000010000000f0000000c0000000f0000000f0000000f0000000c00000017000000170000001700000001000000
         paramName:
         - gameObject
         - target
@@ -2242,13 +2242,6 @@ MonoBehaviour:
         - logLevel
         - text
         - sendToUnityLog
-        - float1
-        - float2
-        - tolerance
-        - equal
-        - lessThan
-        - greaterThan
-        - everyFrame
         - floatVariable
         - lessThan
         - 
@@ -2259,31 +2252,357 @@ MonoBehaviour:
         - 
         - 
         - everyFrame
-        paramDataPos: 000000000000000000000000000000000100000000000000050000000100000002000000030000000000000001000000020000000600000004000000000000000500000006000000070000000100000003000000040000000500000007000000
-        paramByteDataSize: 000000000000000000000000010000000400000000000000010000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: 'TODO:  Check for Valid Jump'
+        paramDataPos: 0000000000000000000000000000000001000000000000000500000001000000000000000200000003000000040000000100000000000000010000000200000006000000
+        paramByteDataSize: 0000000000000000000000000100000004000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+    - name: Check for Valid Jump
+      description: Raycast from Start Piece to finish space
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 769.6406
+        y: 863.25
+        width: 210
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Valid Jump
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Set This as goFinishSpace
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Wait for Picked Event
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetPosition
+        - HutongGames.PlayMaker.Actions.GetPosition
+        - HutongGames.PlayMaker.Actions.Vector3Operator
+        - HutongGames.PlayMaker.Actions.Raycast
+        customNames:
+        - Get Position of Start Space
+        - Get Position of This Space
+        - Vector3 Operator to Get Direction from Start Space to This Space
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 00000101
+        actionStartIndex: 00000000070000000e00000014000000
+        actionHashCodes: 5552ad055552ad05a7550203d3bd7b05
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: GAMEPLAY/goPieceToJump
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: GAMEPLAY/goStartSpace
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: GAMEPLAY/goStartSpace
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1.5
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 7
+        fsmBoolParams:
+        - useVariable: 1
+          name: bValidJump
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: v3PositionOfStartSpace
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: v3PositionOfThisSpace
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: v3PositionOfThisSpace
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: v3PositionOfStartSpace
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: v3DirectionFromStartSpaceToThisSpace
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: v3DirectionFromStartSpaceToThisSpace
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Valid Jump
+        byteData: 00000000000000000000070000000000000000
+        arrayParamSizes: 01000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmInt
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000001c0000000f0000000f0000000f0000000700000001000000140000001c0000000f0000000f0000000f00000007000000010000001c0000001c000000070000001c0000000f00000001000000140000001c0000001c000000070000000f0000001700000011000000130000001c0000001c0000000f000000100000000c00000010000000110000001900000011000000
+        paramName:
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - vector1
+        - vector2
+        - operation
+        - storeVector3Result
+        - storeFloatResult
+        - everyFrame
+        - fromGameObject
+        - fromPosition
+        - direction
+        - space
+        - distance
+        - hitEvent
+        - storeDidHit
+        - storeHitObject
+        - storeHitPoint
+        - storeHitNormal
+        - storeHitDistance
+        - repeatInterval
+        - layerMask
+        - 
+        - invertMask
+        - debugColor
+        - debug
+        paramDataPos: 000000000000000000000000010000000200000000000000040000000100000001000000030000000400000005000000050000000900000002000000030000000a00000004000000060000000e0000000200000005000000060000000f00000007000000000000000000000000000000070000000800000008000000000000000000000001000000010000000000000002000000
+        paramByteDataSize: 00000000000000000000000000000000000000000400000001000000000000000000000000000000000000000000000004000000010000000000000000000000040000000000000000000000010000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    - name: Deactive Piece to Jump
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 386.39062
-        y: 1094.9922
-        width: 202
-        height: 16
+        x: 440.10156
+        y: 1064.5703
+        width: 168.4
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Wait for Picked Event
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.SetGameObject
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000500000008000000
+        actionHashCodes: b2cf10004d51cf0427fbe103
         unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: GAMEPLAY/goPieceToJump
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: GAMEPLAY/goPieceToJump
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -2297,43 +2616,60 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bValidJump
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 
+        byteData: 00000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 1400000011000000110000000100000001000000130000001300000001000000110000001100000001000000
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - variable
+        - gameObject
+        - everyFrame
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000001000000000000000100000002000000020000000300000003000000
+        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000001000000000000000000000001000000
     events:
-    - name: this is a black space
-      isSystemEvent: 0
-      isGlobal: 0
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
-    - name: isTopPlayer
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: isBottomPlayer
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: GAME MANAGER/BEGIN
-      isSystemEvent: 0
-      isGlobal: 1
-    - name: there is a piece here
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: no piece here
-      isSystemEvent: 0
       isGlobal: 0
     - name: MOUSE DOWN
       isSystemEvent: 1
@@ -2341,19 +2677,43 @@ MonoBehaviour:
     - name: BOARD ACTIVITY/Clicked Space
       isSystemEvent: 0
       isGlobal: 1
-    - name: This Could Be Start Space
+    - name: Check for valid Jump
       isSystemEvent: 0
       isGlobal: 0
-    - name: This Could Be Finish Space
+    - name: GAME MANAGER/BEGIN
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: invalid space
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: isBottomPlayer
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: isTopPlayer
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: no piece here
       isSystemEvent: 0
       isGlobal: 0
     - name: Safe to Set as goFinishSpace
       isSystemEvent: 0
       isGlobal: 0
-    - name: invalid space
+    - name: there is a piece here
       isSystemEvent: 0
       isGlobal: 0
-    - name: Check for valid Jump
+    - name: This Could Be Finish Space
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: This Could Be Start Space
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: this is a black space
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Valid Jump
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: handle jump
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -2394,11 +2754,35 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: bValidJump
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables:
       - useVariable: 1
         name: spawnPosition
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: v3DirectionFromStartSpaceToThisSpace
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: v3PositionOfStartSpace
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: v3PositionOfThisSpace
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -2437,6 +2821,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -2444,7 +2834,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 'Next -If distance greater than 1.5, raycast to see if we hit piece
       of opposing player. '
     docUrl: 

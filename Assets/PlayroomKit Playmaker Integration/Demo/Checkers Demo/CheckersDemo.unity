@@ -630,7 +630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -7.2999268, y: 6.450012}
+  m_AnchoredPosition: {x: -7.2998047, y: 6.449951}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &181638027
@@ -5310,7 +5310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   streamMode: 0
   allowGamepads: 0
-  maxPlayersPerRoom: 2
+  maxPlayers: 2
   skipLobby: 0
   reconnectGracePeriodInSeconds: 30
 --- !u!4 &1467641841
@@ -5502,7 +5502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 7.2999268, y: -6.450012}
+  m_AnchoredPosition: {x: 7.2998047, y: -6.449951}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1550517255
