@@ -119,3 +119,5 @@ MonoBehaviour:
   - PlayroomKit/OnPlayerJoin
   - GAME MANAGER/BEGIN
   - BOARD ACTIVITY/Clicked Space
+  - Turn Manager/My Turn
+  - Turn Manager/NOT My Turn
