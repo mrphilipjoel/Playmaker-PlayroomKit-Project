@@ -1318,7 +1318,7 @@ MonoBehaviour:
         paramByteDataSize: 
     - name: Playroom Kit Array Get Player Ids
       description: 
-      colorIndex: 0
+      colorIndex: 8
       position:
         serializedVersion: 2
         x: 220.79688
@@ -1756,7 +1756,7 @@ MonoBehaviour:
         paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000
     - name: Playroom Kit Get First Player Profile Info
       description: 
-      colorIndex: 0
+      colorIndex: 8
       position:
         serializedVersion: 2
         x: 218.45312
@@ -2151,7 +2151,7 @@ MonoBehaviour:
         paramByteDataSize: 0000000000000000000000000100000000000000
     - name: Playroom Kit Get Second Player Profile Info 2
       description: 
-      colorIndex: 0
+      colorIndex: 8
       position:
         serializedVersion: 2
         x: 256.1875
@@ -2260,7 +2260,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 2
+        toState: 'Set Game State: Top Player''s Turn'
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2349,14 +2349,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: State 2
+    - name: 'Set Game State: Top Player''s Turn'
       description: 
-      colorIndex: 0
+      colorIndex: 8
       position:
         serializedVersion: 2
-        x: 339.90625
-        y: 762.0078
-        width: 100
+        x: 277.73438
+        y: 757.1328
+        width: 234
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -2370,7 +2370,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 8c0cd902
+        actionHashCodes: 8da39201
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2381,22 +2381,22 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: GAMEPLAY/STATE KEYS/PLAYERS TURN
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 
+          value: sPlayersTurn
         fsmObjectParams: []
         fsmVarParams:
         - variableName: 
           objectType: UnityEngine.Object
           useVariable: 0
-          type: -1
+          type: 4
           floatValue: 0
           intValue: 0
           boolValue: 0
-          stringValue: 
+          stringValue: top
           vector4Value: {x: 0, y: 0, z: 0, w: 0}
           objectReference: {fileID: 0}
           arrayValue:
@@ -2414,17 +2414,16 @@ MonoBehaviour:
             vector4Values: []
             objectReferences: []
         fsmArrayParams: []
-        fsmEnumParams:
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.PlayroomKitStateVariableType
-          intValue: 0
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -2436,11 +2435,11 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 120000002a00000027000000
+        paramDataType: 120000002700000011000000
         paramName:
         - stateKey
-        - variableType
         - variable
+        - reliable
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000000000000
     events:
