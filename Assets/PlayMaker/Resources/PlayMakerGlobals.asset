@@ -41,6 +41,12 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 
+    - useVariable: 1
+      name: GAMEPLAY/STATE KEYS/PLAYERS TURN
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: sPlayersTurn
     vector2Variables: []
     vector3Variables: []
     colorVariables:
@@ -104,7 +110,10 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    - Gameplay Movement
+    - Player Info
+    - PlayroomKit Game State Keys
+    variableCategoryIDs: 020000000200000002000000020000000300000001000000010000000100000001000000020000000200000002000000020000000000000000000000000000000000000000000000
   events:
   - PlayroomKit/InsertCoin
   - PlayroomKit/OnPlayerJoin
