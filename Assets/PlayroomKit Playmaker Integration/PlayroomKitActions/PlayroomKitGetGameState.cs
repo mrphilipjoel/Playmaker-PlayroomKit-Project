@@ -5,6 +5,7 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
 	using Tooltip = HutongGames.PlayMaker.TooltipAttribute;
     using HutongGames.PlayMaker.Actions;
     using static HutongGames.PlayMaker.FsmEventTarget;
+    using Unity.VisualScripting;
 
     [ActionCategory("PlayroomKit")]
 	public class PlayroomKitGetGameState : FsmStateAction
@@ -26,20 +27,29 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
 
                 case VariableType.Float:
                     variable.floatValue = Playroom.PlayroomKit.GetState<float>(stateKey.Value);
+                    variable.UpdateValue();
                     break;
                 case VariableType.Int:
                     variable.intValue = Playroom.PlayroomKit.GetState<int>(stateKey.Value);
+                    variable.UpdateValue();
                     break;
                 case VariableType.Bool:
                     variable.boolValue = Playroom.PlayroomKit.GetState<bool>(stateKey.Value);
+                    variable.UpdateValue();
                     break;
                 case VariableType.String:
                     variable.stringValue = Playroom.PlayroomKit.GetState<string>(stateKey.Value);
+                    variable.UpdateValue();
+                    Debug.LogWarning(variable.stringValue);
                     break;
                 default:
                     Debug.LogError("Variable type MUST be float, int, bool, or string!");
                     break;
             }
+
+
+
+
         }
 
         public override void OnUpdate()

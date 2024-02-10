@@ -18,7 +18,6 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
         public override void OnEnter()
         {
             Playroom.PlayroomKit.WaitForState(stateKey.Value, FoundState);
-
         }
 
         private void FoundState()

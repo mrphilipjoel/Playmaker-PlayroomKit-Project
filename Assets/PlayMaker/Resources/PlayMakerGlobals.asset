@@ -47,6 +47,18 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: sPlayersTurn
+    - useVariable: 1
+      name: LOCAL PLAYER/sLocalPlayerId
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 
+    - useVariable: 1
+      name: LOCAL PLAYER/sPlayerPosition
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 
     vector2Variables: []
     vector3Variables: []
     colorVariables:
@@ -113,7 +125,7 @@ MonoBehaviour:
     - Gameplay Movement
     - Player Info
     - PlayroomKit Game State Keys
-    variableCategoryIDs: 020000000200000002000000020000000300000001000000010000000100000001000000020000000200000002000000020000000000000000000000000000000000000000000000
+    variableCategoryIDs: 0200000002000000020000000200000003000000000000000000000001000000010000000100000001000000020000000200000002000000020000000000000000000000000000000000000000000000
   events:
   - PlayroomKit/InsertCoin
   - PlayroomKit/OnPlayerJoin
