@@ -3479,7 +3479,7 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: Turn Listener
-    startState: Playroom Kit Wait For Game State
+    startState: State 1
     states:
     - name: Playroom Kit Wait For Game State
       description: 
@@ -3488,7 +3488,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 267.59375
         y: 110.390625
-        width: 230.8
+        width: 227.6
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -4383,6 +4383,58 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000000000000000000000100000002000000000000000100000001000000010000000000000002000000030000000200000003000000040000000100000005000000060000000400000005000000
         paramByteDataSize: 000000000000000000000000010000000000000000000000000000000000000000000000010000000000000000000000000000000100000001000000000000000000000000000000000000000100000001000000
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 596
+        y: 106
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: has state
       isSystemEvent: 0
@@ -4402,7 +4454,19 @@ MonoBehaviour:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
-    globalTransitions: []
+    - name: PlayroomKit/InsertCoin
+      isSystemEvent: 0
+      isGlobal: 1
+    globalTransitions:
+    - fsmEvent:
+        name: PlayroomKit/InsertCoin
+        isSystemEvent: 0
+        isGlobal: 1
+      toState: Playroom Kit Wait For Game State
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
     variables:
       floatVariables: []
       intVariables: []
@@ -7065,7 +7129,13 @@ MonoBehaviour:
         paramName: []
         paramDataPos: 
         paramByteDataSize: 
-    events: []
+    events:
+    - name: PlayroomKit/InsertCoin
+      isSystemEvent: 0
+      isGlobal: 1
+    - name: PlayroomKit/OnPlayerJoin
+      isSystemEvent: 0
+      isGlobal: 1
     globalTransitions: []
     variables:
       floatVariables: []

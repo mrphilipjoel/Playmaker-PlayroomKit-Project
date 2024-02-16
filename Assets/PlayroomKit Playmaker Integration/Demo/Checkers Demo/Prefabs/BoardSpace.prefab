@@ -334,8 +334,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 91.15625
-        y: 899.1094
+        x: 89.015625
+        y: 963.53906
         width: 222.8
         height: 32
       isBreakpoint: 0
@@ -735,7 +735,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 01010101
-        actionIsOpen: 00010101
+        actionIsOpen: 01010101
         actionStartIndex: 00000000030000000a00000010000000
         actionHashCodes: 27fbe1035552ad056053230152221a02
         unityObjectParams: []
@@ -1212,7 +1212,7 @@ MonoBehaviour:
           name: there is a piece here
           isSystemEvent: 0
           isGlobal: 0
-        toState: Set This as goStartSpace
+        toState: Is this One of My Pieces?
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1512,8 +1512,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 102.00781
-        y: 795.0547
+        x: 99.86719
+        y: 859.4844
         width: 182
         height: 32
       isBreakpoint: 0
@@ -3129,6 +3129,155 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000000000000100000001000000
         paramByteDataSize: 000000000000000001000000000000000000000001000000
+    - name: Is this One of My Pieces?
+      description: 
+      colorIndex: 7
+      position:
+        serializedVersion: 2
+        x: 114.13281
+        y: 769.85156
+        width: 177.2
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: not my piece
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Wait for Picked Event
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: my piece
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Set This as goStartSpace
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetParent
+        - HutongGames.PlayMaker.Actions.GetFsmString
+        - HutongGames.PlayMaker.Actions.StringCompare
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000200000007000000
+        actionHashCodes: d97b720252221a020c0e5502
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: goHitPieceLogicGo
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: goHitObject
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: goHitPieceLogicGo
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FSM
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: sPlayerOwner
+        - useVariable: 1
+          name: sHitPiecePlayerOwner
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: sHitPiecePlayerOwner
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: LOCAL PLAYER/sPlayerPosition
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - my piece
+        - not my piece
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000130000001400000012000000120000001200000001000000120000001200000017000000170000001100000001000000
+        paramName:
+        - gameObject
+        - storeResult
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - stringVariable
+        - compareTo
+        - equalEvent
+        - notEqualEvent
+        - storeResult
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000010000000200000000000000030000000400000000000000010000000000000001000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -3185,6 +3334,12 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: This Could Be a Chain Jump
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: my piece
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: not my piece
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
@@ -3256,6 +3411,18 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 
+      - useVariable: 1
+        name: sHitPiecePlayerOwner
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 
+      - useVariable: 1
+        name: sDebugString
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 
       vector2Variables: []
       vector3Variables:
       - useVariable: 1
@@ -3322,6 +3489,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: goHitPieceLogicGo
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -3329,7 +3502,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 'Next -If distance greater than 1.5, raycast to see if we hit piece
       of opposing player. '
     docUrl: 
