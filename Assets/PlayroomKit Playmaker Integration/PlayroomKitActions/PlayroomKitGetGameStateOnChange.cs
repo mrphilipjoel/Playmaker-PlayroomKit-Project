@@ -9,7 +9,7 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
     using HutongGames.Utility;
 
     [ActionCategory("PlayroomKit")]
-	public class PlayroomKitGetGameState : FsmStateAction
+	public class PlayroomKitGetGameStateOnChange : FsmStateAction
 	{
 		public FsmString stateKey;
 
@@ -19,9 +19,18 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
         public FsmVar variable;
 
         public FsmBool reliable;
-        public bool everyFrame;
+        //public bool everyFrame;
+        public FsmBool hasChangedBool;
+
+        public FsmEvent onChangedEvent;
 
         private Fsm fromFsm;
+        private float floatCache;
+        private int intCache;
+        private bool boolCache;
+        private string stringCache;
+
+        private bool firstCheck = true;
 
         private void GetTheState()
         {
@@ -31,6 +40,19 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
                 case VariableType.Float:
                     FsmFloat _floatTarget = fromFsm.Variables.GetFsmFloat(variable.variableName);
                     _floatTarget.Value = Playroom.PlayroomKit.GetState<float>(stateKey.Value);
+                    if (firstCheck)
+                    {
+                        firstCheck = false;
+                        floatCache = _floatTarget.Value;
+                    }
+                    else
+                    {
+                        if (_floatTarget.Value != floatCache)
+                        {
+                            hasChangedBool.Value = true;
+                            Fsm.Event(onChangedEvent);
+                        }
+                    }
                     break;
                 case VariableType.Int:
                     FsmInt _intTarget = fromFsm.Variables.GetFsmInt(variable.variableName);
@@ -58,12 +80,14 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
 
         public override void OnEnter()
         {
+            firstCheck = true;
+            hasChangedBool.Value = false;
             fromFsm = Fsm;
             GetTheState();
-            if (!everyFrame)
+            /*if (!everyFrame)
             {
                 Finish();
-            }
+            }*/
             
         }
 

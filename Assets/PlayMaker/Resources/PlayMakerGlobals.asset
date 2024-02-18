@@ -15,7 +15,13 @@ MonoBehaviour:
   variables:
     floatVariables: []
     intVariables: []
-    boolVariables: []
+    boolVariables:
+    - useVariable: 1
+      name: bMyTurn
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
     stringVariables:
     - useVariable: 1
       name: PLAYERS/TOP/PLAYERID
@@ -59,6 +65,30 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 
+    - useVariable: 1
+      name: GAMEPLAY/STATE KEYS/movedPieceStartXPos
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: movedPieceStartXPos
+    - useVariable: 1
+      name: GAMEPLAY/STATE KEYS/movedPieceStartYPos
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: movedPieceStartYPos
+    - useVariable: 1
+      name: GAMEPLAY/STATE KEYS/movedPieceTargetXPos
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: movedPieceTargetXPos
+    - useVariable: 1
+      name: GAMEPLAY/STATE KEYS/movedPieceTargetYPos
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: movedPieceTargetYPos
     vector2Variables: []
     vector3Variables: []
     colorVariables:
@@ -125,7 +155,7 @@ MonoBehaviour:
     - Gameplay Movement
     - Player Info
     - PlayroomKit Game State Keys
-    variableCategoryIDs: 0200000002000000020000000200000003000000000000000000000001000000010000000100000001000000020000000200000002000000020000000000000000000000000000000000000000000000
+    variableCategoryIDs: 00000000020000000200000002000000020000000300000000000000000000000300000003000000030000000300000001000000010000000100000001000000020000000200000002000000020000000000000000000000000000000000000000000000
   events:
   - PlayroomKit/InsertCoin
   - PlayroomKit/OnPlayerJoin
@@ -134,3 +164,4 @@ MonoBehaviour:
   - Turn Manager/My Turn
   - Turn Manager/NOT My Turn
   - Turn Manager/End My Turn
+  - BOARD ACTIVITY/Move Piece
