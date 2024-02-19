@@ -331,12 +331,21 @@ MonoBehaviour:
         serializedVersion: 2
         x: 64.875
         y: 219.50781
-        width: 206
-        height: 16
+        width: 202.8
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: State 3
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetEventVector3Data
@@ -346,6 +355,8 @@ MonoBehaviour:
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameState
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameState
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameState
+        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
         customNames:
         - 
         - 
@@ -354,10 +365,12 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101010101
-        actionIsOpen: 01010101010101
-        actionStartIndex: 0000000001000000080000000d000000100000001300000016000000
-        actionHashCodes: cfda43025552ad056f1d0b048da392018da392018da392018da39201
+        - 
+        - 
+        actionEnabled: 010101000000000101
+        actionIsOpen: 000000000000000101
+        actionStartIndex: 0000000001000000080000000d000000100000001300000016000000190000001c000000
+        actionHashCodes: cfda43025552ad056f1d0b048da392018da392018da392018da39201021b580088611604
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -400,6 +413,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: movedPieceTargetYPos
+        - useVariable: 1
+          name: GAMEPLAY/STATE KEYS/movedPieceStartXPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: movedPieceStartXPos
         fsmObjectParams: []
         fsmVarParams:
         - variableName: fOldX
@@ -537,8 +556,20 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: fOldX
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -586,13 +617,14 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
+        stringParams:
+        - FINISHED
         byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1c000000140000001c0000000f0000000f0000000f00000007000000010000001c0000000f0000000f0000000f00000001000000120000002700000011000000120000002700000011000000120000002700000011000000120000002700000011000000
+        paramDataType: 1c000000140000001c0000000f0000000f0000000f00000007000000010000001c0000000f0000000f0000000f00000001000000120000002700000011000000120000002700000011000000120000002700000011000000120000002700000011000000120000000f0000001100000017000000
         paramName:
         - getVector3Data
         - gameObject
@@ -619,8 +651,263 @@ MonoBehaviour:
         - stateKey
         - variable
         - reliable
-        paramDataPos: 00000000000000000100000000000000010000000200000000000000040000000200000003000000040000000500000005000000000000000000000000000000010000000100000001000000020000000200000002000000030000000300000003000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000004000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        - stateKey
+        - floatValue
+        - reliable
+        - sendEvent
+        paramDataPos: 0000000000000000010000000000000001000000020000000000000004000000020000000300000004000000050000000500000000000000000000000000000001000000010000000100000002000000020000000200000003000000030000000300000004000000060000000400000000000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    - name: State 3
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 116.80469
+        y: 304.59375
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: State 4
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 021b580088611604
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: GAMEPLAY/STATE KEYS/movedPieceStartYPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: movedPieceStartYPos
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: fOldY
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 120000000f0000001100000017000000
+        paramName:
+        - stateKey
+        - floatValue
+        - reliable
+        - sendEvent
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000000000000
+    - name: State 4
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 155.39062
+        y: 398.20312
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: State 5
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 021b580088611604
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: GAMEPLAY/STATE KEYS/movedPieceTargetXPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: movedPieceTargetXPos
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: fNewX
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 120000000f0000001100000017000000
+        paramName:
+        - stateKey
+        - floatValue
+        - reliable
+        - sendEvent
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000000000000
+    - name: State 5
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 197
+        y: 491.79688
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 021b5800
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: GAMEPLAY/STATE KEYS/movedPieceTargetYPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: movedPieceTargetYPos
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: fNewY
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 120000000f00000011000000
+        paramName:
+        - stateKey
+        - floatValue
+        - reliable
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000000000000
     events:
     - name: BOARD ACTIVITY/Move Piece
       isSystemEvent: 0
@@ -681,6 +968,12 @@ MonoBehaviour:
         value: 0
       - useVariable: 1
         name: fOldY
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: testGetFloat
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -774,7 +1067,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -783,7 +1076,7 @@ MonoBehaviour:
     password: 
     locked: 0
     manualUpdate: 0
-    outVariableIndices: 08000000
+    outVariableIndices: 09000000
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
     ExposedEvents: []

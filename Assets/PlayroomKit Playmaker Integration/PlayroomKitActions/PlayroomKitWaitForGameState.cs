@@ -12,6 +12,7 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
 		public FsmString stateKey;
 
         [ActionSection("Results")]
+        [UIHint(UIHint.Variable)]
         public FsmBool hasStateBool;
         public FsmEvent hasStateEvent;
 
@@ -22,6 +23,8 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
 
         private void FoundState()
         {
+            Debug.LogWarning("Found State: " + stateKey.Value);
+            Debug.LogWarning(Playroom.PlayroomKit.GetState<float>(stateKey.Value));
             hasStateBool.Value = true;
             Fsm.Event(hasStateEvent);
             Finish();

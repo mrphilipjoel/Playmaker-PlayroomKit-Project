@@ -165,3 +165,4 @@ MonoBehaviour:
   - Turn Manager/NOT My Turn
   - Turn Manager/End My Turn
   - BOARD ACTIVITY/Move Piece
+  - GAME MANAGER/NETWORK SYNC BEGIN
