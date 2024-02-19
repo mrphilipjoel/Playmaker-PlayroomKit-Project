@@ -12,3 +12,9 @@ com.unity.vectorgraphics
 
 You will also want to import the latest PlayroomKit Unity SDK from here:
 https://github.com/asadm/playroom-unity/releases
+
+Tips When Working with Playroom and Playmaker:
+1. Don't try get/set states before the InsertCoin event.
+2. Don't have more than one InsertCoin global event transition.
+3. There is a limit (I think of around 11, maybe more, maybe less) of how many 'wait for state' actions you can have running at once.
+4. Two seperate FSMs waiting for different Playroom GameStates at the same time, can cause the wrong callback to happen (so far I've seen this only when a global event transitions to the seperate FSMs at the same time, and the Playroom wait is in the first FSM state that is transitioned to from the global event).
