@@ -277,7 +277,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 114
+        x: 98
         y: 100
         width: 100
         height: 16
@@ -329,34 +329,24 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 64.875
-        y: 219.50781
-        width: 202.8
-        height: 32
+        x: 57.351562
+        y: 214.70312
+        width: 206
+        height: 16
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: State 3
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
+      transitions: []
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetEventVector3Data
         - HutongGames.PlayMaker.Actions.GetPosition
         - HutongGames.PlayMaker.Actions.GetVector3XYZ
-        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameState
-        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameState
-        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameState
-        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameState
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
+        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
+        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
+        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloatCustom
         customNames:
         - 
         - 
@@ -366,11 +356,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        actionEnabled: 010101000000000101
-        actionIsOpen: 000000000000000101
-        actionStartIndex: 0000000001000000080000000d000000100000001300000016000000190000001c000000
-        actionHashCodes: cfda43025552ad056f1d0b048da392018da392018da392018da39201021b580088611604
+        actionEnabled: 0101010101010100
+        actionIsOpen: 0000000000000001
+        actionStartIndex: 0000000001000000080000000d00000010000000130000001600000019000000
+        actionHashCodes: cfda43025552ad056f1d0b04021b5800021b5800021b5800021b5800bb398f05
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -419,104 +408,26 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: movedPieceStartXPos
+        - useVariable: 1
+          name: GAMEPLAY/STATE KEYS/movedPieceStartYPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: movedPieceStartYPos
+        - useVariable: 1
+          name: GAMEPLAY/STATE KEYS/movedPieceTargetXPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: movedPieceTargetXPos
+        - useVariable: 1
+          name: GAMEPLAY/STATE KEYS/movedPieceTargetYPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: movedPieceTargetYPos
         fsmObjectParams: []
-        fsmVarParams:
-        - variableName: fOldX
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 0
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        - variableName: fOldY
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 0
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        - variableName: fNewX
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 0
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        - variableName: fNewY
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 0
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
+        fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
@@ -562,6 +473,48 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: fOldY
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fNewX
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fNewY
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fOldX
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fOldY
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fNewX
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fNewY
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -569,25 +522,25 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
@@ -617,14 +570,13 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
+        stringParams: []
         byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1c000000140000001c0000000f0000000f0000000f00000007000000010000001c0000000f0000000f0000000f00000001000000120000002700000011000000120000002700000011000000120000002700000011000000120000002700000011000000120000000f0000001100000017000000
+        paramDataType: 1c000000140000001c0000000f0000000f0000000f00000007000000010000001c0000000f0000000f0000000f00000001000000120000000f00000011000000120000000f00000011000000120000000f00000011000000120000000f00000011000000120000001200000012000000120000000f0000000f0000000f0000000f00000011000000
         paramName:
         - getVector3Data
         - gameObject
@@ -640,274 +592,28 @@ MonoBehaviour:
         - storeZ
         - everyFrame
         - stateKey
-        - variable
-        - reliable
-        - stateKey
-        - variable
-        - reliable
-        - stateKey
-        - variable
-        - reliable
-        - stateKey
-        - variable
+        - floatValue
         - reliable
         - stateKey
         - floatValue
         - reliable
-        - sendEvent
-        paramDataPos: 0000000000000000010000000000000001000000020000000000000004000000020000000300000004000000050000000500000000000000000000000000000001000000010000000100000002000000020000000200000003000000030000000300000004000000060000000400000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: State 3
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 116.80469
-        y: 304.59375
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: State 4
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 021b580088611604
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: GAMEPLAY/STATE KEYS/movedPieceStartYPos
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: movedPieceStartYPos
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: fOldY
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 120000000f0000001100000017000000
-        paramName:
         - stateKey
         - floatValue
         - reliable
-        - sendEvent
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000000000000
-    - name: State 4
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 155.39062
-        y: 398.20312
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: State 5
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 021b580088611604
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: GAMEPLAY/STATE KEYS/movedPieceTargetXPos
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: movedPieceTargetXPos
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: fNewX
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 120000000f0000001100000017000000
-        paramName:
         - stateKey
         - floatValue
         - reliable
-        - sendEvent
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000000000000
-    - name: State 5
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 197
-        y: 491.79688
-        width: 100
-        height: 16
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions: []
-      actionData:
-        actionNames:
-        - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitSetGameStateFloat
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 021b5800
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: GAMEPLAY/STATE KEYS/movedPieceTargetYPos
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: movedPieceTargetYPos
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: fNewY
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 120000000f00000011000000
-        paramName:
-        - stateKey
-        - floatValue
+        - startXKey
+        - startYKey
+        - targetXKey
+        - targetYKey
+        - startX
+        - startyY
+        - targetX
+        - targetY
         - reliable
-        paramDataPos: 000000000000000000000000
-        paramByteDataSize: 000000000000000000000000
+        paramDataPos: 00000000000000000100000000000000010000000200000000000000040000000200000003000000040000000500000005000000000000000600000000000000010000000700000001000000020000000800000002000000030000000900000003000000040000000500000006000000070000000a0000000b0000000c0000000d00000004000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000004000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     events:
     - name: BOARD ACTIVITY/Move Piece
       isSystemEvent: 0

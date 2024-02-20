@@ -7,20 +7,20 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
     using static HutongGames.PlayMaker.FsmEventTarget;
 
     [ActionCategory("PlayroomKit")]
-	public class PlayroomKitSetGameStateFloat : FsmStateAction
+	public class PlayroomKitSetGameStateInt : FsmStateAction
 	{
         [RequiredField]
         public FsmString stateKey;
 
         [RequiredField]
-        public FsmFloat floatValue;
+        public FsmInt intValue;
 
         public FsmBool reliable;
 
         public override void OnEnter()
-		{
+        {
 
-            Playroom.PlayroomKit.SetState(stateKey.Value, floatValue.Value, reliable.Value);
+            Playroom.PlayroomKit.SetState(stateKey.Value, intValue.Value, reliable.Value);
             Finish();
         }
 
