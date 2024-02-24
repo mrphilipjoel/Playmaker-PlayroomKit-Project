@@ -3525,7 +3525,7 @@ MonoBehaviour:
         x: 379.59375
         y: 190.39062
         width: 230.8
-        height: 32
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -3539,15 +3539,28 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: inEditor
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Set bInEditor true
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.GetEventBoolData
+        - HutongGames.PlayMaker.Actions.BoolTest
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitWaitForGameState
         customNames:
+        - 
+        - 
         - Playroom Kit Wait For Game State
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: ad807c01
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000100000005000000
+        actionHashCodes: 62f95203a4c8bf00ad807c01
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3572,6 +3585,18 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
+          name: bInEditor
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bInEditor
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
@@ -3583,19 +3608,26 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
+        - inEditor
+        - 
         - has state
-        byteData: 
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 120000001100000017000000
+        paramDataType: 1100000011000000170000001700000001000000120000001100000017000000
         paramName:
+        - getBoolData
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
         - stateKey
         - hasStateBool
         - hasStateEvent
-        paramDataPos: 000000000000000000000000
-        paramByteDataSize: 000000000000000000000000
+        paramDataPos: 0000000001000000000000000100000000000000000000000200000002000000
+        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000
     - name: Wait for My Turn
       description: 
       colorIndex: 4
@@ -3603,8 +3635,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: 436.23438
         y: 404.60938
-        width: 129.2
-        height: 32
+        width: 125.2
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -3618,8 +3650,18 @@ MonoBehaviour:
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
+      - fsmEvent:
+          name: inEditor
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Set bInEditor true
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
         - HutongGames.PlayMaker.Actions.SetBoolValue
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitGetGameState
         - HutongGames.PlayMaker.Actions.StringCompare
@@ -3627,10 +3669,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000007000000
-        actionHashCodes: 27fbe103cad6f9010c0e5502
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000004000000070000000b000000
+        actionHashCodes: a4c8bf0027fbe103cad6f9010c0e5502
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3691,6 +3734,12 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
+          name: bInEditor
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
           name: bMyTurn
           tooltip: 
           showInInspector: 0
@@ -3720,15 +3769,21 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
+        - inEditor
+        - 
         - My Turn
         - 
-        byteData: 000101
+        byteData: 00000101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 11000000110000000100000012000000270000001100000001000000120000001200000017000000170000001100000001000000
+        paramDataType: 1100000017000000170000000100000011000000110000000100000012000000270000001100000001000000120000001200000017000000170000001100000001000000
         paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
         - boolVariable
         - boolValue
         - everyFrame
@@ -3742,8 +3797,8 @@ MonoBehaviour:
         - notEqualEvent
         - storeResult
         - everyFrame
-        paramDataPos: 00000000010000000000000000000000000000000200000001000000010000000200000000000000010000000300000002000000
-        paramByteDataSize: 00000000000000000100000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000010000000000000001000000020000000100000000000000000000000300000002000000010000000200000002000000030000000400000003000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000100000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: Its My Turn
       description: 
       colorIndex: 0
@@ -4743,6 +4798,269 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: Set bInEditor true
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 794.0703
+        y: 212.20312
+        width: 134
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Display Turn Text UI 3
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 27fbe103
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: bInEditor
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 110000001100000001000000
+        paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: Display Turn Text UI 3
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 770.77344
+        y: 281.35938
+        width: 162
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Its My Turn 2
+        linkStyle: 0
+        linkConstraint: 2
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: b2cf1000
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 437384614}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000011000000110000000100000001000000
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000001000000
+        paramByteDataSize: 0000000000000000000000000100000001000000
+    - name: Its My Turn 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 794.5156
+        y: 369.5547
+        width: 105.2
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5e69bb04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: MOUSE DOWN Event Manager
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Turn Manager/My Turn
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000170000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     events:
     - name: has state
       isSystemEvent: 0
@@ -4777,6 +5095,9 @@ MonoBehaviour:
     - name: GAME MANAGER/NETWORK SYNC BEGIN
       isSystemEvent: 0
       isGlobal: 1
+    - name: inEditor
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: PlayroomKit/InsertCoin
@@ -4898,14 +5219,14 @@ MonoBehaviour:
     name: Network Sync Pieces
     startState: State 1
     states:
-    - name: Wait for Initial States
+    - name: Playroom Kit Wait For Game State movedPieceStartXPos
       description: 
       colorIndex: 8
       position:
         serializedVersion: 2
-        x: 62
-        y: 208.79688
-        width: 150
+        x: 308.39844
+        y: 190.39062
+        width: 367.6
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -4915,7 +5236,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 2
+        toState: Playroom Kit Wait For Game State movedPieceStartYPos
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -4923,16 +5244,12 @@ MonoBehaviour:
       actionData:
         actionNames:
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitWaitForGameState
-        - HutongGames.PlayMaker.Actions.BoolAllTrue
-        - HutongGames.PlayMaker.Actions.BoolAnyTrue
         customNames:
         - 
-        - 
-        - 
-        actionEnabled: 010000
-        actionIsOpen: 010100
-        actionStartIndex: 00000000030000000b000000
-        actionHashCodes: ad807c018076870580768705
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ad807c01
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -4962,66 +5279,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: hasStartX
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: hasStartY
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: hasTargetX
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: hasTargetY
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: hasStartX
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: hasStartY
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: hasTargetX
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: hasTargetY
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -5029,45 +5286,25 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        - hasAllNeededStates
-        - hasAllNeededStates
-        byteData: 0101
-        arrayParamSizes: 0400000004000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmBool
-        - HutongGames.PlayMaker.FsmBool
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1200000011000000170000000c000000110000001100000011000000110000001700000011000000010000000c00000011000000110000001100000011000000170000001100000001000000
+        paramDataType: 120000001100000017000000
         paramName:
         - stateKey
         - hasStateBool
         - hasStateEvent
-        - boolVariables
-        - 
-        - 
-        - 
-        - 
-        - sendEvent
-        - storeResult
-        - everyFrame
-        - boolVariables
-        - 
-        - 
-        - 
-        - 
-        - sendEvent
-        - storeResult
-        - everyFrame
-        paramDataPos: 00000000000000000000000000000000010000000200000003000000040000000100000005000000000000000100000006000000070000000800000009000000020000000a00000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000000000000
     - name: Get Starts
       description: 
       colorIndex: 8
       position:
         serializedVersion: 2
-        x: 164.83594
-        y: 570.40625
+        x: 404.83594
+        y: 522.40625
         width: 100
         height: 32
       isBreakpoint: 0
@@ -5211,8 +5448,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 153.64062
-        y: 644.7969
+        x: 393.64062
+        y: 596.7969
         width: 119.6
         height: 32
       isBreakpoint: 0
@@ -5429,8 +5666,8 @@ MonoBehaviour:
       colorIndex: 8
       position:
         serializedVersion: 2
-        x: 176.84375
-        y: 720.02344
+        x: 416.84375
+        y: 672.02344
         width: 121.2
         height: 32
       isBreakpoint: 0
@@ -5717,8 +5954,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 181.4375
-        y: 790.60156
+        x: 421.4375
+        y: 742.60156
         width: 100
         height: 32
       isBreakpoint: 0
@@ -5856,8 +6093,8 @@ MonoBehaviour:
       colorIndex: 8
       position:
         serializedVersion: 2
-        x: 190.24219
-        y: 876.0078
+        x: 430.2422
+        y: 828.0078
         width: 149.2
         height: 32
       isBreakpoint: 0
@@ -5880,16 +6117,22 @@ MonoBehaviour:
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitGetGameStateOnChange
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitGetGameStateOnChange
         - HutongGames.PlayMaker.Actions.BoolAllTrue
+        - HutongGames.PlayMaker.Actions.BoolAnyTrue
+        - HutongGames.PlayMaker.Actions.BoolAnyTrue
+        - HutongGames.PlayMaker.Actions.BoolAllTrue
         customNames:
         - 
         - 
         - 
         - 
         - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 00000000050000000a0000000f00000014000000
-        actionHashCodes: 80b5460180b5460180b5460180b5460180768705
+        - 
+        - 
+        - 
+        actionEnabled: 0101010100010101
+        actionIsOpen: 0101010100010101
+        actionStartIndex: 00000000050000000a0000000f000000140000001c0000002200000028000000
+        actionHashCodes: 80b5460180b5460180b5460180b5460180768705807687058076870580768705
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -6105,6 +6348,60 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: startXhasChanged
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: startYhasChanged
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bNewStartPosition
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: targetXhasChanged
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: targetYhasChanged
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bNewFinishPosition
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bNewStartPosition
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: bNewFinishPosition
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -6116,13 +6413,19 @@ MonoBehaviour:
         - 
         - 
         - moveThePiece
-        byteData: 01
-        arrayParamSizes: 04000000
+        - 
+        - 
+        - moveThePiece
+        byteData: 01010101
+        arrayParamSizes: 04000000020000000200000002000000
         arrayParamTypes:
+        - HutongGames.PlayMaker.FsmBool
+        - HutongGames.PlayMaker.FsmBool
+        - HutongGames.PlayMaker.FsmBool
         - HutongGames.PlayMaker.FsmBool
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 12000000270000001100000011000000170000001200000027000000110000001100000017000000120000002700000011000000110000001700000012000000270000001100000011000000170000000c00000011000000110000001100000011000000170000001100000001000000
+        paramDataType: 12000000270000001100000011000000170000001200000027000000110000001100000017000000120000002700000011000000110000001700000012000000270000001100000011000000170000000c000000110000001100000011000000110000001700000011000000010000000c00000011000000110000001700000011000000010000000c00000011000000110000001700000011000000010000000c0000001100000011000000170000001100000001000000
         paramName:
         - stateKey
         - variable
@@ -6152,15 +6455,33 @@ MonoBehaviour:
         - sendEvent
         - storeResult
         - everyFrame
-        paramDataPos: 00000000000000000000000001000000000000000100000001000000020000000300000001000000020000000200000004000000050000000200000003000000030000000600000007000000030000000000000008000000090000000a0000000b000000040000000c00000000000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        - boolVariables
+        - 
+        - 
+        - sendEvent
+        - storeResult
+        - everyFrame
+        - boolVariables
+        - 
+        - 
+        - sendEvent
+        - storeResult
+        - everyFrame
+        - boolVariables
+        - 
+        - 
+        - sendEvent
+        - storeResult
+        - everyFrame
+        paramDataPos: 00000000000000000000000001000000000000000100000001000000020000000300000001000000020000000200000004000000050000000200000003000000030000000600000007000000030000000000000008000000090000000a0000000b000000040000000c00000000000000010000000d0000000e000000050000000f00000001000000020000001000000011000000060000001200000002000000030000001300000014000000070000001500000003000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: Find Overlaps 2
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 216.94531
-        y: 975.41406
+        x: 456.9453
+        y: 927.41406
         width: 122.8
         height: 32
       isBreakpoint: 0
@@ -6365,8 +6686,8 @@ MonoBehaviour:
       colorIndex: 8
       position:
         serializedVersion: 2
-        x: 240.14844
-        y: 1050.6406
+        x: 480.14844
+        y: 1002.6406
         width: 131.6
         height: 32
       isBreakpoint: 0
@@ -6557,8 +6878,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 244.74219
-        y: 1121.2188
+        x: 484.7422
+        y: 1073.2188
         width: 107.6
         height: 32
       isBreakpoint: 0
@@ -6684,8 +7005,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 140.60156
-        y: 102.796875
+        x: 55.320312
+        y: 105.97656
         width: 100
         height: 16
       isBreakpoint: 0
@@ -6693,14 +7014,22 @@ MonoBehaviour:
       hideUnused: 0
       transitions: []
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetOwner
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5c004505
         unityObjectParams: []
-        fsmGameObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: GAMEMANAGER
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
@@ -6727,19 +7056,20 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 13000000
+        paramName:
+        - storeGameObject
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
     - name: Next Frame Event
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 307.1953
-        y: 162.39844
-        width: 272.4
-        height: 32
+        x: 356.10156
+        y: 111.953125
+        width: 274
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -6748,20 +7078,31 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Wait for Initial States
+        toState: Playroom Kit Wait For Game State movedPieceStartXPos
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: inEditor
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: State 2
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
         - HutongGames.PlayMaker.Actions.NextFrameEvent
         customNames:
+        - 
         - Next Frame Event
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 88611604
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: a4c8bf0088611604
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -6778,32 +7119,44 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: bInEditor
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
+        - inEditor
+        - 
         - FINISHED
-        byteData: 
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 17000000
+        paramDataType: 1100000017000000170000000100000017000000
         paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
         - sendEvent
-        paramDataPos: 00000000
-        paramByteDataSize: 00000000
-    - name: State 2
+        paramDataPos: 0000000000000000010000000000000002000000
+        paramByteDataSize: 0000000000000000000000000100000000000000
+    - name: Playroom Kit Wait For Game State movedPieceStartYPos
       description: 
-      colorIndex: 0
+      colorIndex: 8
       position:
         serializedVersion: 2
-        x: 144.90625
-        y: 312.29688
-        width: 100
+        x: 308.90625
+        y: 264.29688
+        width: 367.6
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -6813,7 +7166,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 3
+        toState: Playroom Kit Wait For Game State movedPieceTargetXPos
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6822,7 +7175,7 @@ MonoBehaviour:
         actionNames:
         - GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions.PlayroomKitWaitForGameState
         customNames:
-        - 
+        - Playroom Kit Wait For Game State
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
@@ -6875,14 +7228,14 @@ MonoBehaviour:
         - hasStateEvent
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000000000000
-    - name: State 3
+    - name: Playroom Kit Wait For Game State movedPieceTargetXPos
       description: 
-      colorIndex: 0
+      colorIndex: 8
       position:
         serializedVersion: 2
-        x: 214.14062
-        y: 399.98438
-        width: 100
+        x: 303.7422
+        y: 334.3828
+        width: 378
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -6892,7 +7245,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 4
+        toState: Playroom Kit Wait For Game State movedPieceTargetYPos
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -6954,14 +7307,14 @@ MonoBehaviour:
         - hasStateEvent
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000000000000
-    - name: State 4
+    - name: Playroom Kit Wait For Game State movedPieceTargetYPos
       description: 
-      colorIndex: 0
+      colorIndex: 8
       position:
         serializedVersion: 2
-        x: 244.82812
-        y: 495.28125
-        width: 100
+        x: 304.82812
+        y: 411.28125
+        width: 378
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -7033,6 +7386,58 @@ MonoBehaviour:
         - hasStateEvent
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000000000000
+    - name: State 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 815.1797
+        y: 166.82812
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: hasAllNeededStates
       isSystemEvent: 0
@@ -7055,6 +7460,9 @@ MonoBehaviour:
     - name: GAME MANAGER/NETWORK SYNC BEGIN
       isSystemEvent: 0
       isGlobal: 1
+    - name: inEditor
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: GAME MANAGER/NETWORK SYNC BEGIN
@@ -7141,6 +7549,24 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: bNewPositions
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: bNewStartPosition
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: bNewFinishPosition
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables:
       - useVariable: 1
         name: debugString
@@ -7192,7 +7618,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

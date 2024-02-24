@@ -22,6 +22,12 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 0
+    - useVariable: 1
+      name: bInEditor
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
     stringVariables:
     - useVariable: 1
       name: PLAYERS/TOP/PLAYERID
@@ -131,6 +137,12 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: {fileID: 0}
+    - useVariable: 1
+      name: GAMEMANAGER
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
     objectVariables:
     - useVariable: 1
       name: PLAYERS/TOP/SPRITE
@@ -155,7 +167,7 @@ MonoBehaviour:
     - Gameplay Movement
     - Player Info
     - PlayroomKit Game State Keys
-    variableCategoryIDs: 00000000020000000200000002000000020000000300000000000000000000000300000003000000030000000300000001000000010000000100000001000000020000000200000002000000020000000000000000000000000000000000000000000000
+    variableCategoryIDs: 000000000000000002000000020000000200000002000000030000000000000000000000030000000300000003000000030000000100000001000000010000000100000000000000020000000200000002000000020000000000000000000000000000000000000000000000
   events:
   - PlayroomKit/InsertCoin
   - PlayroomKit/OnPlayerJoin

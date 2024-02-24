@@ -72,6 +72,12 @@ WebGLInput.captureAllKeyboardInput = false;
             yield return new WaitForEndOfFrame();
             PlayerReferenceDictionary = PlayroomKit.GetPlayers();
             PlayroomKit.OnPlayerJoin(PlayerJoined);
+#if UNITY_EDITOR
+            Fsm.EventData.BoolData = true;
+#endif
+# if !UNITY_EDITOR
+            Fsm.EventData.BoolData = false;
+#endif
             PlayMakerFSM.BroadcastEvent("PlayroomKit/InsertCoin");
         }
 
