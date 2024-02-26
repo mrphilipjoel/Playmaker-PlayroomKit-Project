@@ -23,8 +23,8 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
 
         private void FoundState()
         {
-            //Debug.LogWarning("Found State: " + stateKey.Value);
-            //Debug.LogWarning(Playroom.PlayroomKit.GetState<float>(stateKey.Value));
+            Debug.LogWarning("Found State: " + stateKey.Value);
+            Debug.LogWarning(Playroom.PlayroomKit.GetState<float>(stateKey.Value));
             hasStateBool.Value = true;
             Fsm.Event(hasStateEvent);
             Finish();

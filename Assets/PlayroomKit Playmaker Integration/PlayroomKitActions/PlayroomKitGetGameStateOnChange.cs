@@ -99,19 +99,14 @@ namespace GooglyEyesGames.PlaymakerIntegrations.PlayroomKit.Actions
             {
                 case VariableType.Float:
                     return null;
-                    break;
                 case VariableType.Int:
                     return null;
-                    break;
                 case VariableType.Bool:
                     return null;
-                    break;
                 case VariableType.String:
                     return null;
-                    break;
                 default:
 					return "Variable type MUST be float, int, bool, or string!";
-                    break;
             }
         }
 #endif

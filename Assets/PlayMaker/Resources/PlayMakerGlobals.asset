@@ -95,6 +95,18 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: movedPieceTargetYPos
+    - useVariable: 1
+      name: GAMEPLAY/STATE KEYS/jumpedPieceYPos
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: jumpedPieceYPos
+    - useVariable: 1
+      name: GAMEPLAY/STATE KEYS/jumpedPieceXPos
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: jumpedPieceXPos
     vector2Variables: []
     vector3Variables: []
     colorVariables:
@@ -167,7 +179,7 @@ MonoBehaviour:
     - Gameplay Movement
     - Player Info
     - PlayroomKit Game State Keys
-    variableCategoryIDs: 000000000000000002000000020000000200000002000000030000000000000000000000030000000300000003000000030000000100000001000000010000000100000000000000020000000200000002000000020000000000000000000000000000000000000000000000
+    variableCategoryIDs: 0000000000000000000000000000000002000000020000000200000002000000030000000000000000000000030000000300000003000000030000000000000003000000000000000100000001000000010000000100000000000000020000000200000002000000020000000000000000000000000000000000000000000000
   events:
   - PlayroomKit/InsertCoin
   - PlayroomKit/OnPlayerJoin
@@ -178,3 +190,5 @@ MonoBehaviour:
   - Turn Manager/End My Turn
   - BOARD ACTIVITY/Move Piece
   - GAME MANAGER/NETWORK SYNC BEGIN
+  - Network Sync / Start Syncing Jumped Pieces
+  - BOARD ACTIVITY/JUMP PIECE
